@@ -1,0 +1,13 @@
+<div ng-repeat="post in vm.posts | orderBy: '-upvotes'">
+    {{ post.title }} - upvotes: {{ post.upvotes }}
+    <br>
+    {{ post.desc }}
+</div>
+
+<br>
+
+<form ng-submit="vm.addPost()">
+    <input ng-model="vm.newPost.title" type="text">
+    <input ng-model="vm.newPost.desc" type="text">
+    <button type="submit">Send</button>
+</form>
