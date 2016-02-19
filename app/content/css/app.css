@@ -1,5 +1,6 @@
 /* --- Base --- */
 
+
 * {
     box-sizing: border-box;
 }
@@ -9,12 +10,12 @@ body {
 }
 
 a {
-    color: #e74c3c;
+    color: rgba(231,76,60,.8);
     text-decoration: none;
 }
 
 a:hover {
-    color: #e74c3c;
+    color: rgba(231,76,60,1);
 }
 
 .container {
@@ -64,6 +65,11 @@ nav h1 a {
     color: currentColor;
 }
 
+nav h1 a i {
+    font-size: 1.25rem;
+    vertical-align: text-top;
+}
+
 nav ul {
     float: right;
     display: inline-block;
@@ -81,69 +87,111 @@ nav ul li a {
 /* --- Forms --- */
 
 
-form {
-    margin: 1.5rem 0;
+aside {
+    float: right;
+    margin-left: 1rem;
+    display: inline-block;
+    width: calc(30% - 1rem);
+    background: rgba(0,0,0,.03);
+    padding: 2rem;
+}
+
+form h3 {
+    margin-top: 0;
 }
 
 input,
 button {
-    margin: 0 5px;
+    margin: .25rem 0;
 }
 
 input {
     outline: 0;
     padding: .5rem .5rem .5rem .65rem;
     border: 1px solid #eaeaea;
-    min-width: calc(33.333% - 65px);
+    min-width: 100%;
+}
+
+input[type=text]:focus {
+    border: 1px solid #dfdfdf;
 }
 
 .form-group {
     display: block;
-    margin-top: 3rem;
-}
-
-.form-group input:first-child {
-    margin-left: 0;
-}
-
-.form-group input:last-child {
-    margin-right: 0;
+    margin-top: 2rem;
 }
 
 input[type=submit] {
-    min-width: 0;
-    width: 150px;
+    width: 100%;
     padding: .5rem;
     border: 1px solid #eaeaea;
-    background: #e74c3c;
+    background: rgba(0,0,0,.3);
     color: white;
+}
+
+input[type=submit]:hover {
+    background: rgba(0,0,0,.35);
+}
+
+input[type=submit]:active {
+    background: #e74c3c;
 }
 
 
 /* --- Post Single --- */
 
 
+main {
+    width: 70%;
+    display: inline-block;
+}
+
 .post--single {
     padding: 2rem 1rem;
     position: relative;
     border: 1px solid #eaeaea;
-    margin: .5rem 0;
+    margin: 1rem 0;
 }
 
-.post--single a {
-    margin-top: 1rem;
-    margin-left: 4rem;
+.post--single:first-child {
+    margin-top: 0;
+}
+
+.post--single .comments i,
+.post--single .source {
+    margin-right: .15rem;
+    vertical-align: middle;
+}
+
+.post--single .comments {
     font-size: 80%;
+    margin-top: 1rem;
+    margin-left: 4.5rem;
+    display: inline-block;
+}
+
+.post--single .source {
+    float: right;
+    display: inline-block;
+    color: #e3e3e3;
+    font-size: 80%;
+    letter-spacing: 1px;
+    margin-right: 4.5rem;
+    margin-top: 1rem;
+}
+
+.post--single .source:hover {
+    color: #d2d2d2;
 }
 
 .post--single-upvote {
-    padding: 1rem;
+    padding: 1rem 1.25rem;
     text-align: center;
     display: inline-block;
     position: absolute;
     top: 0; bottom: 0;
     margin: auto;
-    height: 90px;
+    height: 97px;
 }
 
 .post--single-upvote i,
@@ -154,10 +202,11 @@ input[type=submit] {
 .post--single-upvote i {
     cursor: pointer;
     font-size: 110%;
+    color: rgba(0,0,0,.5);
 }
 
 .post--single-upvote i:hover {
-    color: #2ecc40;
+    color: #444444;
 }
 
 .post--single-upvote i.up.upvoted {
@@ -168,12 +217,48 @@ input[type=submit] {
     color: #ff4136;
 }
 
-.post--single-content {
-    display: block;
-    padding-left: 4rem;
+.post--single-upvote span {
+    padding: .25rem;
+    color: rgba(0,0,0,.65);
 }
 
-.post--single-content h3 ,
+.post--single-content {
+    display: block;
+    margin-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+.post--single-content h3,
 .post--single-content p {
     margin-top: 0;
+}
+
+.post--single-content h3 a {
+    font-size: inherit;
+    color: inherit;
+}
+
+.post--single-content p {
+    margin-top: 1rem;
+    color: rgba(0,0,0,.5);
+}
+
+
+/* --- Footer --- */
+
+
+footer {
+    width: 100%;
+    padding: 2rem 0;
+    display: inline-block;
+}
+
+footer small {
+    float: left;
+    color: rgba(0,0,0,.5);
+}
+
+footer a {
+    float: right;
+    font-size: 80%;
 }

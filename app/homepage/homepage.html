@@ -1,40 +1,43 @@
 <h2>Frontpage</h2>
 
-<div ng-repeat="post in vm.posts | orderBy: '-upvotes'" class="post--single">
-    <span class="post--single-upvote">
-        <i ng-click="vm.upVote(post)"
-           class="icon icon-arrow-up up"
-           ng-class="post.class"></i>
-        <span>{{ post.upvotes }}</span>
-        <i ng-click="vm.downVote(post)"
-           class="icon icon-arrow-down down"
-           ng-class="post.class"></i>
-    </span>
+<main>
+    <div ng-repeat="post in vm.posts | orderBy: '-upvotes'" class="post--single">
+        <span class="post--single-upvote">
+            <i ng-click="vm.upVote(post)"
+               class="icon icon-arrow-up up"
+               ng-class="post.class"></i>
+            <span>{{ post.upvotes }}</span>
+            <i ng-click="vm.downVote(post)"
+               class="icon icon-arrow-down down"
+               ng-class="post.class"></i>
+        </span>
 
-    <div class="post--single-content">
-        <h3>
-            <a ng-show="post.link" href="{{ post.link }}">
-                {{ post.title }}
-            </a>
+        <div class="post--single-content">
+            <h3>
+                <a ng-show="post.link" href="{{ post.link }}" target="_blank">
+                    {{ post.title }}
+                </a>
 
-            <span ng-hide="post.link">
-                {{ post.title }}
-            </span>
-        </h3>
-        <p>{{ post.desc }}</p>
+                <span ng-hide="post.link">
+                    {{ post.title }}
+                </span>
+            </h3>
+            <p>{{ post.desc }}</p>
+        </div>
+
+        <a href="#/posts/{{ $index }}" class="comments"><i class="icon icon-speech-bubble"></i> Comments</a>
+        <a ng-show="post.link" href="{{ post.link }}" target="_blank" class="source"><i class="icon icon-anchor"></i> {{ post.link }}</a>
     </div>
+</main>
 
-    <a href="#/posts/{{ $index }}">Comments</a>
-</div>
-
-<br>
-
-<form ng-submit="vm.addPost()">
-    <h3>Submit your news</h3>
-    <div class="form-group">
-        <input placeholder="Title" ng-model="vm.newPost.title" type="text" title="Title">
-        <input placeholder="Link" ng-model="vm.newPost.link" type="text" title="Link">
-        <input placeholder="Description" ng-model="vm.newPost.desc" type="text" title="Description">
-        <input type="submit" value="Post">
-    </div>
-</form>
+<aside>
+    <form ng-submit="vm.addPost()">
+        <h3>Submit your news</h3>
+        <div class="form-group">
+            <input placeholder="Title" ng-model="vm.newPost.title" type="text" title="Title">
+            <input placeholder="Link" ng-model="vm.newPost.link" type="text" title="Link">
+            <input placeholder="Description" ng-model="vm.newPost.desc" type="text" title="Description">
+            <input type="submit" value="Post">
+        </div>
+    </form>
+</aside>

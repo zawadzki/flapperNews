@@ -1,10 +1,4 @@
-<div class="page-header">
-    <h1>
-        <a ng-show="vm.post.link" href="{{ vm.post.link }}">
-            {{ vm.post.title }}
-        </a>
-        <span ng-hide="vm.post.link">
-            {{ vm.post.title }}
-        </span>
-    </h1>
+<div class="post--header">
+    <h2>{{ vm.post.title }}</h2>
+    <p>{{ vm.post.desc }}</p>
 </div>
