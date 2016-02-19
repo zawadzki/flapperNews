@@ -3,7 +3,9 @@
 
 	angular
 		.module('flapperNews.homepage')
-		.controller('HomepageCtrl', ['posts', HomepageCtrl]);
+		.controller('HomepageCtrl', HomepageCtrl);
+
+	HomepageCtrl.$inject = ['posts'];
 
 	function HomepageCtrl(posts) {
 		var vm = this;

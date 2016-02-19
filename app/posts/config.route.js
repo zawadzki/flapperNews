@@ -2,19 +2,19 @@
     'use strict';
 
     angular
-        .module('flapperNews.homepage')
+        .module('flapperNews.posts')
         .config(configFunction);
 
     configFunction.$inject = ['$routeProvider', '$locationProvider'];
 
     function configFunction($routeProvider, $locationProvider) {
-        $routeProvider.when('/', {
-            templateUrl:  'homepage/homepage.html',
-            controller:   'HomepageCtrl',
+        $routeProvider.when('/posts/:id', {
+            templateUrl:  'posts/posts.html',
+            controller:   'PostsCtrl',
             controllerAs: 'vm'
         });
 
-        $locationProvider.html5Mode(true);
+		$locationProvider.html5Mode(true);
     }
 
 })();

@@ -7,7 +7,8 @@
 			'ngRoute',
 
 			//flapper modules
-			'flapperNews.homepage'
+			'flapperNews.homepage',
+			'flapperNews.posts'
 		])
 
 })();

@@ -5,11 +5,15 @@
         <a ng-show="post.link" href="{{ post.link }}">
             {{ post.title }}
         </a>
+
+        <span ng-hide="post.link">
+            {{ post.title }}
+        </span>
     </h2>
 
-    <h2 ng-hide="post.link">{{ post.title }}</h2>
-
     <p>{{ post.desc }}</p>
+
+    <a href="/posts/{{$index}}">Comments</a>
 </div>
 
 <br>

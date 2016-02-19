@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('flapperNews.homepage')
+		.module('flapperNews')
 		.factory('posts', posts);
 
 	function posts() {
