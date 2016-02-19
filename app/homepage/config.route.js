@@ -5,16 +5,14 @@
         .module('flapperNews.homepage')
         .config(configFunction);
 
-    configFunction.$inject = ['$routeProvider', '$locationProvider'];
+    configFunction.$inject = ['$routeProvider'];
 
-    function configFunction($routeProvider, $locationProvider) {
+    function configFunction($routeProvider) {
         $routeProvider.when('/', {
             templateUrl:  'homepage/homepage.html',
             controller:   'HomepageCtrl',
             controllerAs: 'vm'
         });
-
-        $locationProvider.html5Mode(true);
     }
 
 })();
