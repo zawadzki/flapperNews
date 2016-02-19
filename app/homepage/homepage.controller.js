@@ -18,7 +18,14 @@
 		}
 
 		vm.newPost = new Post();
-		vm.posts = posts.posts;
+		vm.posts = [
+			{title: 'Title One', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.', upvotes: 5},
+			{title: 'Title Two', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.', upvotes: 2},
+			{title: 'Title Three', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.', upvotes: 15},
+			{title: 'Title Four', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.', upvotes: 9},
+			{title: 'Title Five', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.', upvotes: 4}
+		];
+		//vm.posts = posts.posts;
 		vm.addPost = addPost;
 
 		function addPost() {
@@ -28,11 +35,18 @@
 		}
 
 		//Upvotes handler
-		vm.incrementUpvotes = incrementUpvotes;
+		vm.upVote = upVote;
+		vm.downVote = downVote;
 
-		function incrementUpvotes(post) {
+		function upVote(post) {
 			post.upvotes += 1;
+            post.class = 'upvoted';
 		}
+
+        function downVote(post) {
+            post.upvotes -= 1;
+            post.class = 'downvoted';
+        }
 	}
 
 })();

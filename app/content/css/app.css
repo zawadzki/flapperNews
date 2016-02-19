@@ -23,16 +23,34 @@ a:hover {
     margin-right: auto;
 }
 
+.page {
+    clear: both;
+}
+
+.page:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.page h2 {
+    margin-bottom: 3rem;
+}
+
 
 /* --- Navbar --- */
 
 
 nav {
-    width: 100%;
-    float: left;
     display: block;
     border-bottom: 1px solid #eaeaea;
     padding: 1rem;
+}
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 nav h1 {
@@ -60,5 +78,102 @@ nav ul li a {
 }
 
 
-/* --- Homepage --- */
+/* --- Forms --- */
 
+
+form {
+    margin: 1.5rem 0;
+}
+
+input,
+button {
+    margin: 0 5px;
+}
+
+input {
+    outline: 0;
+    padding: .5rem .5rem .5rem .65rem;
+    border: 1px solid #eaeaea;
+    min-width: calc(33.333% - 65px);
+}
+
+.form-group {
+    display: block;
+    margin-top: 3rem;
+}
+
+.form-group input:first-child {
+    margin-left: 0;
+}
+
+.form-group input:last-child {
+    margin-right: 0;
+}
+
+input[type=submit] {
+    min-width: 0;
+    width: 150px;
+    padding: .5rem;
+    border: 1px solid #eaeaea;
+    background: #e74c3c;
+    color: white;
+}
+
+
+/* --- Post Single --- */
+
+
+.post--single {
+    padding: 2rem 1rem;
+    position: relative;
+    border: 1px solid #eaeaea;
+    margin: .5rem 0;
+}
+
+.post--single a {
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 80%;
+}
+
+.post--single-upvote {
+    padding: 1rem;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 0; bottom: 0;
+    margin: auto;
+    height: 90px;
+}
+
+.post--single-upvote i,
+.post--single-upvote span {
+    display: block;
+}
+
+.post--single-upvote i {
+    cursor: pointer;
+    font-size: 110%;
+}
+
+.post--single-upvote i:hover {
+    color: #2ecc40;
+}
+
+.post--single-upvote i.up.upvoted {
+    color: #2ecc40;
+}
+
+.post--single-upvote i.down.downvoted {
+    color: #ff4136;
+}
+
+.post--single-content {
+    display: block;
+    padding-left: 4rem;
+}
+
+.post--single-content h3 ,
+.post--single-content p {
+    margin-top: 0;
+}

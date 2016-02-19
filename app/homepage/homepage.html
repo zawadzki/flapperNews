@@ -1,26 +1,40 @@
-<div ng-repeat="post in vm.posts | orderBy: '-upvotes'">
-    <span ng-click="vm.incrementUpvotes(post)">⇧</span> upvotes: {{ post.upvotes }}
+<h2>Frontpage</h2>
 
-    <h2>
-        <a ng-show="post.link" href="{{ post.link }}">
-            {{ post.title }}
-        </a>
+<div ng-repeat="post in vm.posts | orderBy: '-upvotes'" class="post--single">
+    <span class="post--single-upvote">
+        <i ng-click="vm.upVote(post)"
+           class="icon icon-arrow-up up"
+           ng-class="post.class"></i>
+        <span>{{ post.upvotes }}</span>
+        <i ng-click="vm.downVote(post)"
+           class="icon icon-arrow-down down"
+           ng-class="post.class"></i>
+    </span>
 
-        <span ng-hide="post.link">
-            {{ post.title }}
-        </span>
-    </h2>
+    <div class="post--single-content">
+        <h3>
+            <a ng-show="post.link" href="{{ post.link }}">
+                {{ post.title }}
+            </a>
 
-    <p>{{ post.desc }}</p>
+            <span ng-hide="post.link">
+                {{ post.title }}
+            </span>
+        </h3>
+        <p>{{ post.desc }}</p>
+    </div>
 
-    <a href="#/posts/{{$index}}">Comments</a>
+    <a href="#/posts/{{ $index }}">Comments</a>
 </div>
 
 <br>
 
 <form ng-submit="vm.addPost()">
-    <input ng-model="vm.newPost.title" type="text" title="Title">
-    <input ng-model="vm.newPost.link" type="text" title="Link">
-    <input ng-model="vm.newPost.desc" type="text" title="Description">
-    <button type="submit">Post</button>
+    <h3>Submit your news</h3>
+    <div class="form-group">
+        <input placeholder="Title" ng-model="vm.newPost.title" type="text" title="Title">
+        <input placeholder="Link" ng-model="vm.newPost.link" type="text" title="Link">
+        <input placeholder="Description" ng-model="vm.newPost.desc" type="text" title="Description">
+        <input type="submit" value="Post">
+    </div>
 </form>
