@@ -80,7 +80,7 @@ nav ul li {
 }
 
 nav ul li a {
-    padding: 0 .5rem;
+    padding: 0 1rem;
 }
 
 
@@ -96,24 +96,32 @@ aside {
     padding: 2rem;
 }
 
+aside.sticked {
+    top: 1rem;
+    position: fixed;
+}
+
 form h3 {
     margin-top: 0;
 }
 
 input,
-button {
-    margin: .25rem 0;
-}
-
-input {
+textarea {
     outline: 0;
+    margin: .25rem 0;
     padding: .5rem .5rem .5rem .65rem;
     border: 1px solid #eaeaea;
     min-width: 100%;
 }
 
-input[type=text]:focus {
+input[type=text]:focus,
+textarea:focus {
     border: 1px solid #dfdfdf;
+}
+
+textarea {
+    resize: none;
+    min-height: 150px;
 }
 
 .form-group {
@@ -157,30 +165,31 @@ main {
     margin-top: 0;
 }
 
-.post--single .comments i,
-.post--single .source {
-    margin-right: .15rem;
-    vertical-align: middle;
+.post--single .footer {
+    width: 85%;
+    display: block;
+    margin: 1rem auto auto;
+    border-top: 1px solid rgba(0,0,0,.03);
 }
 
-.post--single .comments {
-    font-size: 80%;
-    margin-top: 1rem;
-    margin-left: 4.5rem;
+.footer a {
+    font-size: 75%;
     display: inline-block;
+    margin-top: 1rem;
 }
 
-.post--single .source {
+.footer a i {
+    margin-right: .15rem;
+}
+
+.footer .source {
     float: right;
     display: inline-block;
-    color: #e3e3e3;
-    font-size: 80%;
     letter-spacing: 1px;
-    margin-right: 4.5rem;
-    margin-top: 1rem;
+    color: #e3e3e3;
 }
 
-.post--single .source:hover {
+.footer .source:hover {
     color: #d2d2d2;
 }
 
@@ -192,6 +201,7 @@ main {
     top: 0; bottom: 0;
     margin: auto;
     height: 97px;
+    width: 70px;
 }
 
 .post--single-upvote i,
@@ -225,7 +235,7 @@ main {
 .post--single-content {
     display: block;
     margin-left: 4.5rem;
-    padding-right: 4.5rem;
+    margin-right: 4.5rem;
 }
 
 .post--single-content h3,

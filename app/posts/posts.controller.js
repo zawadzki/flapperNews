@@ -10,6 +10,7 @@
 	function PostsCtrl($routeParams, posts) {
 		var vm = this;
 		vm.post = posts.posts[$routeParams.id];
+
 		console.log(vm);
 		console.log(posts);
 	}
