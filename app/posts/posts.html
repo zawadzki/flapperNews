@@ -1,6 +1,34 @@
 <main>
     <div class="post--header">
+        <span class="post--single-upvote">
+            <i ng-click="vm.upVote(post)"
+               class="icon icon-arrow-up up"
+               ng-class="vm.post.class"></i>
+            <span>{{ vm.post.upvotes }}</span>
+            <i ng-click="vm.downVote(post)"
+               class="icon icon-arrow-down down"
+               ng-class="vm.post.class"></i>
+        </span>
         <h2>{{ vm.post.title }}</h2>
         <p>{{ vm.post.desc }}</p>
+    </div>
+
+    <div class="comments--section">
+        <div ng-repeat="comment in vm.post.comments | orderBy:'-upvotes'">
+            <div class="comment--single-like">
+                <i class="icon icon-heart" ng-click="likeIt(comment)"></i>
+            </div>
+
+            {{comment.likes}} - by {{comment.author}}
+        <p>{{comment.body}} </p>
+        </div>
+
+        <form ng-submit="vm.addComment()">
+            <h3>Add a new comment</h3>
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Comment" ng-model="body"></textarea>
+            </div>
+            <input type="submit" value="Post">
+        </form>
     </div>
 </main>
