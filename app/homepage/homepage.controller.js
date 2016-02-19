@@ -3,31 +3,33 @@
 
 	angular
 		.module('flapperNews.homepage')
-		.controller('HomepageCtrl', HomepageCtrl);
+		.controller('HomepageCtrl', ['posts', HomepageCtrl]);
 
-	function HomepageCtrl() {
+	function HomepageCtrl(posts) {
 		var vm = this;
 
 		function Post() {
 			this.title 	 = '';
+			this.link 	 = '';
 			this.desc  	 = '';
 			this.upvotes = 0;
 		}
 
 		vm.newPost = new Post();
-		vm.posts = [
-			{ title: 'post 1', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorum itaque, necessitatibus quae ratione temporibus.', upvotes: 5 },
-			{ title: 'post 2', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorum itaque, necessitatibus quae ratione temporibus.', upvotes: 2 },
-			{ title: 'post 3', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorum itaque, necessitatibus quae ratione temporibus.', upvotes: 8 },
-			{ title: 'post 4', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorum itaque, necessitatibus quae ratione temporibus.', upvotes: 9 },
-			{ title: 'post 5', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorum itaque, necessitatibus quae ratione temporibus.', upvotes: 4 }
-		];
+		vm.posts = posts.posts;
 		vm.addPost = addPost;
 
 		function addPost() {
 			if( vm.newPost.title === '' ) { return; }
 			vm.posts.push(vm.newPost);
 			vm.newPost = new Post();
+		}
+
+		//Upvotes handler
+		vm.incrementUpvotes = incrementUpvotes;
+
+		function incrementUpvotes(post) {
+			post.upvotes += 1;
 		}
 	}
 

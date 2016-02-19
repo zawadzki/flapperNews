@@ -1,13 +1,22 @@
 <div ng-repeat="post in vm.posts | orderBy: '-upvotes'">
-    {{ post.title }} - upvotes: {{ post.upvotes }}
-    <br>
-    {{ post.desc }}
+    <span ng-click="vm.incrementUpvotes(post)">⇧</span> upvotes: {{ post.upvotes }}
+
+    <h2>
+        <a ng-show="post.link" href="{{ post.link }}">
+            {{ post.title }}
+        </a>
+    </h2>
+
+    <h2 ng-hide="post.link">{{ post.title }}</h2>
+
+    <p>{{ post.desc }}</p>
 </div>
 
 <br>
 
 <form ng-submit="vm.addPost()">
-    <input ng-model="vm.newPost.title" type="text">
-    <input ng-model="vm.newPost.desc" type="text">
-    <button type="submit">Send</button>
+    <input ng-model="vm.newPost.title" type="text" title="Title">
+    <input ng-model="vm.newPost.link" type="text" title="Link">
+    <input ng-model="vm.newPost.desc" type="text" title="Description">
+    <button type="submit">Post</button>
 </form>
