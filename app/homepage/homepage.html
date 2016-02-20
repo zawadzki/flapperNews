@@ -1,9 +1,9 @@
 <main>
     <div ng-repeat="post in vm.posts | orderBy: '-upvotes'" class="post--single">
-        <span class="post--single-upvote">
-            <i ng-click="vm.upvote(post)" class="icon icon-arrow-up up" ng-class="post.class"></i>
+        <span class="post--single-upvote" ng-class="post.class">
+            <i ng-click="vm.upvote(post)" class="icon icon-arrow-up up"></i>
             <span>{{ post.upvotes }}</span>
-            <i ng-click="vm.downvote(post)" class="icon icon-arrow-down down" ng-class="post.class"></i>
+            <i ng-click="vm.downvote(post)" class="icon icon-arrow-down down"></i>
         </span>
 
         <div class="post--single-content">

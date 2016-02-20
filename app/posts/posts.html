@@ -1,9 +1,9 @@
 <main>
     <div class="post--header">
-        <span class="post--single-upvote">
-            <i ng-click="vm.upvote(vm.post)" class="icon icon-arrow-up up" ng-class="vm.post.class"></i>
+        <span class="post--single-upvote" ng-class="vm.post.class">
+            <i ng-click="vm.upvote(vm.post)" class="icon icon-arrow-up up"></i>
             <span>{{ vm.post.upvotes }}</span>
-            <i ng-click="vm.downvote(vm.post)" class="icon icon-arrow-down down" ng-class="vm.post.class"></i>
+            <i ng-click="vm.downvote(vm.post)" class="icon icon-arrow-down down"></i>
         </span>
         <h2>
             <a ng-show="vm.post.link" href="{{ vm.post.link }}" target="_blank">
@@ -15,8 +15,8 @@
                 </span>
         </h2>
         <small am-time-ago="vm.post.date"></small>
-        <small ng-show="post.author">by @{{ vm.post.author }}</small>
-        <small ng-hide="post.author">by anonymous</small>
+        <small ng-show="vm.post.author">by @{{ vm.post.author }}</small>
+        <small ng-hide="vm.post.author">by anonymous</small>
         <p>{{ vm.post.desc }}</p>
     </div>
 

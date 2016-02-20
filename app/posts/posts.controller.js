@@ -5,9 +5,9 @@
 		.module('flapperNews.posts')
 		.controller('PostsCtrl', PostsCtrl);
 
-	PostsCtrl.$inject = ['$routeParams', 'posts', 'vote'];
+	PostsCtrl.$inject = ['$routeParams', 'aside', 'posts', 'vote'];
 
-	function PostsCtrl($routeParams, posts, vote) {
+	function PostsCtrl($routeParams, aside, posts, vote) {
 		var vm = this;
 
         vm.post = posts.posts[$routeParams.id];
@@ -30,6 +30,14 @@
             vm.comments.push(vm.newComment);
             vm.newComment = new Comment();
         }
+
+		//Trigger sticky aside
+		(function() {
+			var el = document.getElementsByTagName('aside');
+			var className = 'sticked';
+
+			aside.sticky(el, className);
+		})();
 
         //Voting handler
 		vm.upvote = upvote;

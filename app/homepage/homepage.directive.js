@@ -137,19 +137,26 @@
 		return {
 			up : function(post) {
 				if( post.class === 'upvoted' ) {
-					post.upvotes --;
+					post.upvotes--;
 					post.class = '';
+				} else if( post.class === 'downvoted' ) {
+					post.upvotes += 2;
+					post.class = 'upvoted';
 				} else {
-					post.upvotes ++;
+					post.upvotes++;
 					post.class = 'upvoted';
 				}
 			},
 			down : function(post) {
+				console.log(post.class);
 				if( post.class === 'downvoted' ) {
-					post.upvotes ++;
+					post.upvotes++;
 					post.class = '';
+				} else if( post.class === 'upvoted' ) {
+					post.upvotes -= 2;
+					post.class = 'downvoted';
 				} else {
-					post.upvotes --;
+					post.upvotes--;
 					post.class = 'downvoted';
 				}
 			}

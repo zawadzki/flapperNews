@@ -10,16 +10,16 @@ body {
 }
 
 a {
-    color: rgba(231,76,60,.8);
+    color: rgba(0, 177, 106,.8);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgba(231,76,60,1);
+    color: rgba(0, 177, 106,1);
 }
 
 .container {
-    max-width: 1366px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -98,7 +98,7 @@ aside.sticked {
     position: fixed;
 }
 
-form h3 {
+form h4 {
     margin-top: 0;
 }
 
@@ -134,18 +134,14 @@ textarea {
 input[type=submit] {
     width: 100%;
     padding: .5rem;
-    border: 1px solid #999999;
-    background: rgba(0,0,0,.3);
-    color: white;
-}
-
-input[type=submit]:hover {
-    background: rgba(0,0,0,.35);
+    border: 1px solid #dcdcdc;
+    background: #eaeaea;
+    color: #8c8c8c;
 }
 
 input[type=submit]:active {
-    background: #e74c3c;
-    border-color: #ca3f31;
+    background: #dcdcdc;
+    transform: translateY(1px);
 }
 
 
@@ -231,7 +227,7 @@ main {
     color: rgba(46, 204, 64, .4);
 }
 
-.post--single-upvote i.up.upvoted {
+.post--single-upvote.upvoted i.up {
     color: #2ecc40;
 }
 
@@ -239,7 +235,7 @@ main {
     color: rgba(255, 65, 54, .4);
 }
 
-.post--single-upvote i.down.downvoted {
+.post--single-upvote.downvoted i.down {
     color: #ff4136;
 }
 
