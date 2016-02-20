@@ -10,63 +10,75 @@
 		return {
 			posts: [
 				{
+					id: 0,
                     title: 'Title One',
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
                     upvotes: 10,
-                    comments: [
-                        { author: 'Joe', body: 'Cool post!', likes: 0 },
-                        { author: 'Bob', body: 'Great idea but everything is wrong!', likes: 0 }
-                    ]
+					comments: [
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false }
+					]
                 },
                 {
+					id: 1,
                     title: 'Title Two',
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
                     upvotes: 9,
-                    comments: [
-                        { author: 'Joe', body: 'Cool post!', likes: 0 },
-                        { author: 'Bob', body: 'Great idea but everything is wrong!', likes: 0 }
-                    ]
+					comments: [
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false }
+					]
                 },
                 {
+					id: 2,
                     title: 'Title Three',
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
                     upvotes: 8,
-                    comments: [
-                        { author: 'Joe', body: 'Cool post!', likes: 0 },
-                        { author: 'Bob', body: 'Great idea but everything is wrong!', likes: 0 }
-                    ]
+					comments: [
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false }
+					]
                 },
                 {
+					id: 3,
                     title: 'Title Four',
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
                     upvotes: 7,
-                    comments: [
-                        { author: 'Joe', body: 'Cool post!', likes: 0 },
-                        { author: 'Bob', body: 'Great idea but everything is wrong!', likes: 0 }
-                    ]
+					comments: [
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false }
+					]
                 },
                 {
+					id: 4,
                     title: 'Title Five',
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
                     upvotes: 6,
-                    comments: [
-                        { author: 'Joe', body: 'Cool post!', likes: 0 },
-                        { author: 'Bob', body: 'Great idea but everything is wrong!', likes: 0 }
-                    ]
+					comments: [
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false }
+					]
                 },
                 {
+					id: 5,
                     title: 'Title Six',
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
                     upvotes: 5,
                     comments: [
-                        { author: 'Joe', body: 'Cool post!', likes: 0 },
-                        { author: 'Bob', body: 'Great idea but everything is wrong!', likes: 0 }
+                        { author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+                        { author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false },
+                        { author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', likes: 0, liked: false }
                     ]
                 }
 			]
@@ -95,6 +107,24 @@
 				});
 			}
 		};
+	}
+
+	//Up/down voting directive
+	angular
+		.module('flapperNews.homepage')
+		.factory('vote', vote);
+
+	function vote() {
+		return {
+			up : function(post) {
+				post.upvotes ++;
+				post.class = 'upvoted';
+			},
+			down : function(post) {
+				post.upvotes --;
+				post.class = 'downvoted';
+			}
+		}
 	}
 
 })();

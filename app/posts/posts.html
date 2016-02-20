@@ -1,34 +1,56 @@
 <main>
     <div class="post--header">
         <span class="post--single-upvote">
-            <i ng-click="vm.upVote(post)"
-               class="icon icon-arrow-up up"
-               ng-class="vm.post.class"></i>
+            <i ng-click="vm.upvote(vm.post)" class="icon icon-arrow-up up" ng-class="vm.post.class"></i>
             <span>{{ vm.post.upvotes }}</span>
-            <i ng-click="vm.downVote(post)"
-               class="icon icon-arrow-down down"
-               ng-class="vm.post.class"></i>
+            <i ng-click="vm.downvote(vm.post)" class="icon icon-arrow-down down" ng-class="vm.post.class"></i>
         </span>
-        <h2>{{ vm.post.title }}</h2>
+        <h2>
+            <a ng-show="vm.post.link" href="{{ vm.post.link }}" target="_blank">
+                {{ vm.post.title }}
+            </a>
+
+                <span ng-hide="vm.post.link">
+                    {{ vm.post.title }}
+                </span>
+        </h2>
         <p>{{ vm.post.desc }}</p>
     </div>
 
     <div class="comments--section">
-        <div ng-repeat="comment in vm.post.comments | orderBy:'-upvotes'">
+        <div ng-repeat="comment in vm.post.comments | orderBy:'-upvotes'" class="comment--single">
             <div class="comment--single-like">
-                <i class="icon icon-heart" ng-click="likeIt(comment)"></i>
+                <i class="icon icon-heart" ng-click="vm.likeIt(comment)" ng-class="comment.class"></i>
+                <span>{{ comment.likes }}</span>
             </div>
-
-            {{comment.likes}} - by {{comment.author}}
-        <p>{{comment.body}} </p>
+            <div class="comment--single-content">
+                <p>{{ comment.body }}</p>
+                <div class="footer" ng-show="comment.author">@{{ comment.author }}</div>
+                <div class="footer" ng-hide="comment.author">anonymous</div>
+            </div>
         </div>
+    </div>
 
+    <div class="comment--form">
         <form ng-submit="vm.addComment()">
-            <h3>Add a new comment</h3>
+            <h3>New comment</h3>
             <div class="form-group">
-                <textarea class="form-control" placeholder="Comment" ng-model="body"></textarea>
+                <textarea placeholder="Comment" ng-model="vm.newComment.body"></textarea>
+                <input type="text" placeholder="Author" ng-model="vm.newComment.author">
+                <input type="submit" value="Post">
             </div>
-            <input type="submit" value="Post">
         </form>
     </div>
 </main>
+
+<aside>
+    <form ng-submit="vm.addPost()">
+        <h3>Submit your story</h3>
+        <div class="form-group">
+            <input placeholder="Title" ng-model="vm.newPost.title" type="text" title="Title">
+            <input placeholder="Link" ng-model="vm.newPost.link" type="text" title="Link">
+            <textarea placeholder="Description" ng-model="vm.newPost.desc" title="Description"></textarea>
+            <input type="submit" value="Post">
+        </div>
+    </form>
+</aside>
