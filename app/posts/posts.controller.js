@@ -54,11 +54,11 @@
 		function likeIt(comment) {
 			if( comment.liked === false ) {
 				comment.likes ++;
-				comment.class = 'liked';
+				comment.classLike = 'liked';
 				comment.liked = true;
 			} else {
 				comment.likes --;
-				comment.class = '';
+				comment.classLike = '';
 				comment.liked = false;
 			}
 		}

@@ -1,6 +1,6 @@
 <main>
     <div ng-repeat="post in vm.posts | orderBy: '-upvotes'" class="post--single">
-        <span class="post--single-upvote" ng-class="post.class">
+        <span class="post--single-upvote" ng-class="post.classVote">
             <i ng-click="vm.upvote(post)" class="icon icon-arrow-up up"></i>
             <span>{{ post.upvotes }}</span>
             <i ng-click="vm.downvote(post)" class="icon icon-arrow-down down"></i>
@@ -16,9 +16,11 @@
                     {{ post.title }}
                 </span>
             </h3>
-            <small am-time-ago="post.date"></small>
-            <small ng-show="post.author">by @{{ post.author }}</small>
-            <small ng-hide="post.author">by anonymous</small>
+            <div>
+                <small am-time-ago="post.date"></small>
+                <small ng-show="post.author">by @{{ post.author }}</small>
+                <small ng-hide="post.author">by anonymous</small>
+            </div>
             <p>{{ post.desc }}</p>
         </div>
 

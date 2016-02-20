@@ -1,6 +1,6 @@
 <main>
     <div class="post--header">
-        <span class="post--single-upvote" ng-class="vm.post.class">
+        <span class="post--single-upvote" ng-class="vm.post.classVote">
             <i ng-click="vm.upvote(vm.post)" class="icon icon-arrow-up up"></i>
             <span>{{ vm.post.upvotes }}</span>
             <i ng-click="vm.downvote(vm.post)" class="icon icon-arrow-down down"></i>
@@ -14,18 +14,21 @@
                     {{ vm.post.title }}
                 </span>
         </h2>
-        <small am-time-ago="vm.post.date"></small>
-        <small ng-show="vm.post.author">by @{{ vm.post.author }}</small>
-        <small ng-hide="vm.post.author">by anonymous</small>
+        <div>
+            <small am-time-ago="vm.post.date"></small>
+            <small ng-show="vm.post.author">by @{{ vm.post.author }}</small>
+            <small ng-hide="vm.post.author">by anonymous</small>
+        </div>
         <p>{{ vm.post.desc }}</p>
     </div>
 
     <div class="comments--section">
-        <div ng-repeat="comment in vm.post.comments | orderBy:'-upvotes'" class="comment--single">
-            <div class="comment--single-like">
-                <i class="icon icon-heart" ng-click="vm.likeIt(comment)" ng-class="comment.class"></i>
-                <span>{{ comment.likes }}</span>
-            </div>
+        <div ng-repeat="comment in vm.post.comments" class="comment--single" ng-class="comment.classLike">
+            <span class="post--single-upvote" ng-class="comment.classVote">
+                <i ng-click="vm.upvote(comment)" class="icon icon-arrow-up up"></i>
+                <span>{{ comment.upvotes }}</span>
+                <i ng-click="vm.downvote(comment)" class="icon icon-arrow-down down"></i>
+            </span>
             <div class="comment--single-content">
                 <p>{{ comment.body }}</p>
                 <div class="footer">
@@ -33,6 +36,10 @@
                     <small ng-show="comment.author">by @{{ comment.author }}</small>
                     <small ng-hide="comment.author">by anonymous</small>
                 </div>
+            </div>
+            <div class="comment--single-like">
+                <i class="icon icon-heart-outlined" ng-click="vm.likeIt(comment)"></i>
+                <span>{{ comment.likes }}</span>
             </div>
         </div>
     </div>

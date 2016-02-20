@@ -6,16 +6,16 @@
 }
 
 body {
-    color: #444444;
+    color: rgba(44, 62, 80,1);
 }
 
 a {
-    color: rgba(0, 177, 106,.8);
+    color: rgba(30, 139, 195,.8);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgba(0, 177, 106,1);
+    color: rgba(30, 139, 195,1);
 }
 
 .container {
@@ -89,7 +89,7 @@ aside {
     margin-left: 1rem;
     display: inline-block;
     width: calc(30% - 1rem);
-    background: rgba(0,0,0,.03);
+    border: 1px solid #eaeaea;
     padding: 2rem;
 }
 
@@ -98,14 +98,15 @@ aside.sticked {
     position: fixed;
 }
 
-form h4 {
+form h3 {
     margin-top: 0;
 }
 
 input,
 textarea {
     outline: 0;
-    margin: .25rem 0;
+    margin: .5rem 0;
+    background: rgba(0,0,0,.015);
     padding: .5rem .5rem .5rem .65rem;
     border: 1px solid #eaeaea;
     min-width: 100%;
@@ -136,6 +137,7 @@ input[type=submit] {
     padding: .5rem;
     border: 1px solid #dcdcdc;
     background: #eaeaea;
+    margin-bottom: 0;
     color: #8c8c8c;
 }
 
@@ -167,7 +169,7 @@ main {
 .post--single .footer {
     width: 100%;
     display: block;
-    padding: 0 5.35rem;
+    padding: 0 1.5rem 0 3.65rem;
     margin: 1rem auto auto;
     border-top: 1px solid rgba(0,0,0,.035);
 }
@@ -180,7 +182,7 @@ main {
 }
 
 .footer span {
-    color: rgba(0,0,0,.5);
+    color: rgba(44, 62, 80,.5);
 }
 
 .footer a i {
@@ -202,14 +204,15 @@ main {
 }
 
 .post--single-upvote {
-    padding: 1rem 1.25rem;
+    padding: 0;
     text-align: center;
     display: inline-block;
     position: absolute;
-    top: -3.25rem; bottom: 0;
+    top: -3.25rem;
+    bottom: 0;
     margin: auto;
-    height: 97px;
-    width: 70px;
+    height: 67px;
+    width: 45px;
 }
 
 .post--single-upvote i,
@@ -220,33 +223,33 @@ main {
 .post--single-upvote i {
     cursor: pointer;
     font-size: 110%;
-    color: rgba(0,0,0,.5);
+    color: rgba(44, 62, 80,.5);
 }
 
 .post--single-upvote i.up:hover {
-    color: rgba(46, 204, 64, .4);
+    color: rgba(46, 204, 113,.4);
 }
 
 .post--single-upvote.upvoted i.up {
-    color: #2ecc40;
+    color: rgba(46, 204, 113,1);
 }
 
 .post--single-upvote i.down:hover {
-    color: rgba(255, 65, 54, .4);
+    color: rgba(239, 72, 54,.4);
 }
 
 .post--single-upvote.downvoted i.down {
-    color: #ff4136;
+    color: rgba(239, 72, 54,1);
 }
 
 .post--single-upvote span {
     padding: .25rem;
-    color: rgba(0,0,0,.65);
+    color: rgba(44, 62, 80,.65);
 }
 
 .post--single-content {
     display: block;
-    margin: 0 5.35rem;
+    margin: 0 1.5rem 0 3.65rem;
 }
 
 .post--single-content h3,
@@ -261,7 +264,7 @@ main {
 
 .post--single-content p,
 .post--single-content small {
-    color: rgba(0,0,0,.5);
+    color: rgba(44, 62, 80,.5);
 }
 
 .post--single-content p {
@@ -280,7 +283,7 @@ footer {
 
 footer small {
     float: left;
-    color: rgba(0,0,0,.5);
+    color: rgba(44, 62, 80,.5);
 }
 
 footer a {
@@ -301,7 +304,8 @@ footer a {
 
 .post--header h2 {
     margin: 0;
-    display: block;
+    text-indent: -3px;
+    display: inline-block;
 }
 
 .post--header h2 a {
@@ -310,7 +314,7 @@ footer a {
 
 .post--header small,
 .post--header p {
-    color: rgba(0,0,0,.5);
+    color: rgba(44, 62, 80,.5);
 }
 
 .post--header p {
@@ -335,42 +339,74 @@ footer a {
 .comment--single {
     padding: 1.5rem;
     display: block;
-    margin-top: .25rem;
+    margin-top: .5rem;
     border: 1px solid #eaeaea;
+    position: relative;
 }
 
 .comment--single:first-child {
     margin-top: 0;
 }
 
+.comment--single .post--single-upvote {
+    padding: 0;
+    width: 40px; height: 54px;
+    top: 0; bottom: 0;
+    left: 1rem;
+}
+
+.comment--single .post--single-upvote i {
+    font-size: 100%;
+}
+
+.comment--single .post--single-upvote span {
+    font-size: 80%;
+    color: rgba(44, 62, 80,.5);
+}
+
 .comment--single-like {
-    padding: 0 1.5rem 0 0;
+    right: 1rem;
+    bottom: .75rem;
     text-align: center;
-    display: inline-block;
-    vertical-align: top;
+    position: absolute;
 }
 
 .comment--single-like i,
 .comment--single-like span {
-    display: block;
+    color: rgba(44, 62, 80,.5);
+}
+
+.comment--single-like span {
+    font-size: 80%;
+    vertical-align: middle;
 }
 
 .comment--single-like i {
     cursor: pointer;
-    font-size: 110%;
-    color: rgba(0,0,0,.5);
+    font-size: 100%;
+    vertical-align: sub;
 }
 
 .comment--single-like i:hover {
-    color: rgba(231,76,60,.6);
+    color: rgba(217, 30, 24,.6);
 }
 
-.comment--single-like i.liked {
-    color: rgba(231,76,60,1);
+.comment--single.liked {
+    background: rgba(217, 30, 24,0.025);
+    border-color: rgba(217, 30, 24,0.065);
+}
+
+.comment--single.liked .comment--single-like i {
+    color: rgba(217, 30, 24,1);
+}
+
+.comment--single.liked .comment--single-like i:before {
+    content: "\e904";
 }
 
 .comment--single-content {
-    width: 90%;
+    width: 95%;
+    padding-left: 3rem;
     display: inline-block;
 }
 
@@ -380,7 +416,8 @@ footer a {
 
 .comment--single .footer {
     font-size: 80%;
-    color: rgba(0,0,0,.5);
+    margin-top: .5rem;
+    color: rgba(44, 62, 80,.5);
 }
 
 .comment--form {

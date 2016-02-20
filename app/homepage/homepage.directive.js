@@ -18,12 +18,12 @@
                     upvotes: 10,
 					date: moment(new Date('2016-02-20T05:29:59Z')),
 					comments: [
-						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'SpongBong', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'HelloMr', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'KaraLix', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false }
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'SpongBong', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'HelloMr', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'KaraLix', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false }
 					]
                 },
                 {
@@ -35,9 +35,9 @@
                     upvotes: 9,
 					date: moment(new Date('2016-02-20T04:29:59Z')),
 					comments: [
-						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false }
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false }
 					]
                 },
                 {
@@ -49,10 +49,10 @@
                     upvotes: 8,
 					date: moment(new Date('2016-02-20T04:15:59Z')),
 					comments: [
-						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'Zizu', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false }
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'Zizu', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false }
 					]
                 },
                 {
@@ -64,11 +64,11 @@
                     upvotes: 7,
 					date: moment(new Date('2016-02-20T03:29:59Z')),
 					comments: [
-						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'Marco', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'Polo', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false }
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'Marco', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'Polo', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false }
 					]
                 },
                 {
@@ -80,10 +80,10 @@
                     upvotes: 6,
 					date: moment(new Date('2016-02-20T02:29:59Z')),
 					comments: [
-						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'Zeegee', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false }
+						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'Zeegee', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+						{ author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false }
 					]
                 },
                 {
@@ -95,9 +95,9 @@
                     upvotes: 5,
 					date: moment(new Date('2016-02-20T02:15:59Z')),
                     comments: [
-                        { author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-                        { author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false },
-                        { author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), likes: 0, liked: false }
+                        { author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+                        { author: 'iLikeTrains87', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
+                        { author: 'BobbyM', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false }
                     ]
                 }
 			]
@@ -136,28 +136,27 @@
 	function vote() {
 		return {
 			up : function(post) {
-				if( post.class === 'upvoted' ) {
+				if( post.classVote === 'upvoted' ) {
 					post.upvotes--;
-					post.class = '';
-				} else if( post.class === 'downvoted' ) {
+					post.classVote = '';
+				} else if( post.classVote === 'downvoted' ) {
 					post.upvotes += 2;
-					post.class = 'upvoted';
+					post.classVote = 'upvoted';
 				} else {
 					post.upvotes++;
-					post.class = 'upvoted';
+					post.classVote = 'upvoted';
 				}
 			},
 			down : function(post) {
-				console.log(post.class);
-				if( post.class === 'downvoted' ) {
+				if( post.classVote === 'downvoted' ) {
 					post.upvotes++;
-					post.class = '';
-				} else if( post.class === 'upvoted' ) {
+					post.classVote = '';
+				} else if( post.classVote === 'upvoted' ) {
 					post.upvotes -= 2;
-					post.class = 'downvoted';
+					post.classVote = 'downvoted';
 				} else {
 					post.upvotes--;
-					post.class = 'downvoted';
+					post.classVote = 'downvoted';
 				}
 			}
 		}
