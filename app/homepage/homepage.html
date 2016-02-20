@@ -1,6 +1,4 @@
 <main>
-    <h2>Frontpage</h2>
-
     <div ng-repeat="post in vm.posts | orderBy: '-upvotes'" class="post--single">
         <span class="post--single-upvote">
             <i ng-click="vm.upvote(post)" class="icon icon-arrow-up up" ng-class="post.class"></i>

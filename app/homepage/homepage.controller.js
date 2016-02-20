@@ -12,11 +12,12 @@
 
         //Adding post handler
 		function Post() {
-			this.id 	 = posts.posts.length;
-			this.title 	 = '';
-			this.link 	 = '';
-			this.desc  	 = '';
-			this.upvotes = 0;
+			this.id 	  = posts.posts.length;
+			this.title 	  = '';
+			this.link 	  = '';
+			this.desc  	  = '';
+			this.upvotes  = 0;
+			this.comments = [];
 		}
 
 		vm.newPost = new Post();

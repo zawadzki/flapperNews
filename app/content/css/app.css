@@ -34,11 +34,6 @@ a:hover {
     clear: both;
 }
 
-.page h2 {
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
 
 /* --- Navbar --- */
 
@@ -170,7 +165,7 @@ main {
 }
 
 .post--single:first-child {
-    margin-top: 0;
+    margin-top: 1rem;
 }
 
 .post--single .footer {
@@ -292,12 +287,13 @@ footer a {
 .post--header {
     position: relative;
     display: block;
-    padding: 3rem;
-    text-align: center;
+    padding: 3rem 0;
+    text-align: left;
 }
 
 .post--header h2 {
     margin: 0;
+    display: inline-block;
 }
 
 .post--header h2 a {
@@ -306,12 +302,22 @@ footer a {
 
 .post--header p {
     color: rgba(0,0,0,.5);
+    display: inline-block;
+    width: 85%;
 }
 
 .post--header .post--single-upvote {
     position: static;
     float: left;
-    margin-left: -3rem;
+    font-size: 150%;
+    height: 130px;
+    width: 85px;
+    margin-left: 0;
+    padding: 1rem 1.5rem 1rem 1rem;
+}
+
+.post--header .post--single-upvote span {
+    line-height: 1.65;
 }
 
 .comment--single {
@@ -326,7 +332,7 @@ footer a {
 }
 
 .comment--single-like {
-    padding: 0 1rem 0 0;
+    padding: 0 1.5rem 0 0;
     text-align: center;
     display: inline-block;
 }
