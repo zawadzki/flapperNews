@@ -14,6 +14,9 @@
                     {{ vm.post.title }}
                 </span>
         </h2>
+        <small am-time-ago="vm.post.date"></small>
+        <small ng-show="post.author">by @{{ vm.post.author }}</small>
+        <small ng-hide="post.author">by anonymous</small>
         <p>{{ vm.post.desc }}</p>
     </div>
 
@@ -25,8 +28,11 @@
             </div>
             <div class="comment--single-content">
                 <p>{{ comment.body }}</p>
-                <div class="footer" ng-show="comment.author">@{{ comment.author }}</div>
-                <div class="footer" ng-hide="comment.author">anonymous</div>
+                <div class="footer">
+                    <small am-time-ago="comment.date"></small>
+                    <small ng-show="comment.author">by @{{ comment.author }}</small>
+                    <small ng-hide="comment.author">by anonymous</small>
+                </div>
             </div>
         </div>
     </div>

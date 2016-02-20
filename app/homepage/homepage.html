@@ -16,11 +16,14 @@
                     {{ post.title }}
                 </span>
             </h3>
+            <small am-time-ago="post.date"></small>
+            <small ng-show="post.author">by @{{ post.author }}</small>
+            <small ng-hide="post.author">by anonymous</small>
             <p>{{ post.desc }}</p>
         </div>
 
         <div class="footer">
-            <a href="#/posts/{{ post.id }}" class="comments"><i class="icon icon-speech-bubble"></i> Comments</a>
+            <a href="#/posts/{{ post.id }}">Comments <small>({{ post.comments.length }})</small></a>
             <a ng-show="post.link" href="{{ post.link }}" target="_blank" class="source"><i class="icon icon-link"></i> {{ post.link }}</a>
         </div>
     </div>

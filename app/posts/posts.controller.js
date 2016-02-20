@@ -16,6 +16,7 @@
         function Comment() {
             this.body  = '';
 			this.author = '';
+			this.date = moment(new Date());
             this.likes = 0;
 			this.liked = false;
         }
@@ -47,6 +48,10 @@
 				comment.likes ++;
 				comment.class = 'liked';
 				comment.liked = true;
+			} else {
+				comment.likes --;
+				comment.class = '';
+				comment.liked = false;
 			}
 		}
 	}

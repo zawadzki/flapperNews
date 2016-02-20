@@ -5,6 +5,7 @@
 		.module('flapperNews', [
 			//core modules
 			'ngRoute',
+			'angularMoment',
 
 			//flapper modules
 			'flapperNews.homepage',

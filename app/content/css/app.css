@@ -173,23 +173,31 @@ main {
     display: block;
     padding: 0 5.35rem;
     margin: 1rem auto auto;
-    border-top: 1px solid rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.035);
 }
 
-.footer a {
+.footer a,
+.footer span {
     font-size: 75%;
     display: inline-block;
     margin-top: 1rem;
+}
+
+.footer span {
+    color: rgba(0,0,0,.5);
 }
 
 .footer a i {
     margin-right: .15rem;
 }
 
+.footer a small {
+    letter-spacing: 1px;
+}
+
 .footer .source {
     float: right;
     display: inline-block;
-    letter-spacing: 1px;
     color: #e3e3e3;
 }
 
@@ -255,9 +263,13 @@ main {
     color: inherit;
 }
 
+.post--single-content p,
+.post--single-content small {
+    color: rgba(0,0,0,.5);
+}
+
 .post--single-content p {
     margin-top: 1rem;
-    color: rgba(0,0,0,.5);
 }
 
 
@@ -293,15 +305,19 @@ footer a {
 
 .post--header h2 {
     margin: 0;
-    display: inline-block;
+    display: block;
 }
 
 .post--header h2 a {
     color: inherit;
 }
 
+.post--header small,
 .post--header p {
     color: rgba(0,0,0,.5);
+}
+
+.post--header p {
     display: inline-block;
     width: 85%;
 }
@@ -335,6 +351,7 @@ footer a {
     padding: 0 1.5rem 0 0;
     text-align: center;
     display: inline-block;
+    vertical-align: top;
 }
 
 .comment--single-like i,
@@ -357,6 +374,7 @@ footer a {
 }
 
 .comment--single-content {
+    width: 90%;
     display: inline-block;
 }
 

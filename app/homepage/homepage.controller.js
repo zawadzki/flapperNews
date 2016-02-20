@@ -17,6 +17,7 @@
 			this.link 	  = '';
 			this.desc  	  = '';
 			this.upvotes  = 0;
+			this.date 	  = moment(new Date());
 			this.comments = [];
 		}
 
