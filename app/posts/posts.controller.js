@@ -17,6 +17,7 @@
             this.body  = '';
 			this.author = '';
 			this.date = moment(new Date());
+			this.upvotes = 0;
             this.likes = 0;
 			this.liked = false;
         }
