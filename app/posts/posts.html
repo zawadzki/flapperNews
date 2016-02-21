@@ -59,15 +59,16 @@
 </main>
 
 <aside>
+    <h3>Top links</h3>
     <div ng-repeat="post in vm.posts | filter: vm.popularityFilter" class="post--single">
         <i ng-show="post.upvotes > 10" class="icon icon-star hot"></i>
 
         <div class="post--single-content">
-            <h3>
-                <a href="{{ post.link }}" target="_blank">
+            <h4>
+                <a href="#/posts/{{ post.id }}">
                     {{ post.title }}
                 </a>
-            </h3>
+            </h4>
             <div>
                 <small am-time-ago="post.date"></small>
                 <small ng-show="post.author">by @{{ post.author }}</small>

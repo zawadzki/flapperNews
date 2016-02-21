@@ -101,10 +101,6 @@ aside.sticked {
     position: fixed;
 }
 
-form h3 {
-    margin-top: 0;
-}
-
 input,
 textarea {
     outline: 0;
@@ -123,6 +119,10 @@ textarea:focus {
 textarea {
     resize: none;
     min-height: 150px;
+}
+
+form h3 {
+    margin-top: 0;
 }
 
 .form-group {
@@ -265,11 +265,13 @@ main {
 }
 
 .post--single-content h3,
+.post--single-content h4,
 .post--single-content p {
     margin-top: 0;
 }
 
-.post--single-content h3 a {
+.post--single-content h3 a,
+.post--single-content h4 a {
     font-size: inherit;
     color: inherit;
 }
@@ -444,24 +446,29 @@ footer a {
 
 /* --- Popular Aside --- */
 
+aside h3 {
+    margin-top: 0;
+}
 
 aside .post--single {
     margin: 0;
     border: 0;
     padding: 1.5rem 0;
-    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
 }
 
-aside .post--single:first-child {
-    margin-top: 0;
-    padding-top: 0;
+aside .post--single:first-of-type {
+    margin-top: 2rem;
 }
 
 aside .post--single:last-child {
-    border-bottom: 0;
     padding-bottom: 0;
 }
 
 aside .post--single-content {
     margin: 0;
+}
+
+aside .icon-star {
+    right: 0;
 }
