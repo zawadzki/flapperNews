@@ -59,13 +59,20 @@
 </main>
 
 <aside>
-    <form ng-submit="vm.addPost()">
-        <h3>Submit your story</h3>
-        <div class="form-group">
-            <input placeholder="Title" ng-model="vm.newPost.title" type="text" title="Title">
-            <input placeholder="Link" ng-model="vm.newPost.link" type="text" title="Link">
-            <textarea placeholder="Description" ng-model="vm.newPost.desc" title="Description"></textarea>
-            <input type="submit" value="Post">
+    <div ng-repeat="post in vm.posts | filter: vm.popularityFilter" class="post--single">
+        <i ng-show="post.upvotes > 10" class="icon icon-star hot"></i>
+
+        <div class="post--single-content">
+            <h3>
+                <a href="{{ post.link }}" target="_blank">
+                    {{ post.title }}
+                </a>
+            </h3>
+            <div>
+                <small am-time-ago="post.date"></small>
+                <small ng-show="post.author">by @{{ post.author }}</small>
+                <small ng-hide="post.author">by anonymous</small>
+            </div>
         </div>
-    </form>
+    </div>
 </aside>

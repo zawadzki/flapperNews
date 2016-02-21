@@ -15,7 +15,7 @@
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
-                    upvotes: 10,
+                    upvotes: 15,
 					date: moment(new Date('2016-02-20T05:29:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -32,7 +32,7 @@
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
-                    upvotes: 9,
+                    upvotes: 13,
 					date: moment(new Date('2016-02-20T04:29:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -46,7 +46,7 @@
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
-                    upvotes: 8,
+                    upvotes: 12,
 					date: moment(new Date('2016-02-20T04:15:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -61,7 +61,7 @@
                     link: 'http://google.pl',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
-                    upvotes: 7,
+                    upvotes: 11,
 					date: moment(new Date('2016-02-20T03:29:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },

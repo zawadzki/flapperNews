@@ -440,3 +440,28 @@ footer a {
     width: 100%;
     margin-right: .25rem;
 }
+
+
+/* --- Popular Aside --- */
+
+
+aside .post--single {
+    margin: 0;
+    border: 0;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+aside .post--single:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+aside .post--single:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+aside .post--single-content {
+    margin: 0;
+}

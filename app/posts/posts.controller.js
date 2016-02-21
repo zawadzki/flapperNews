@@ -10,6 +10,8 @@
 	function PostsCtrl($routeParams, aside, posts, vote) {
 		var vm = this;
 
+		vm.posts = posts.posts;
+
         vm.post = posts.posts[$routeParams.id];
 
         //Adding comment handler
@@ -62,6 +64,11 @@
 				comment.classLike = '';
 				comment.liked = false;
 			}
+		}
+
+		//Popularity Filter
+		vm.popularityFilter = function (post) {
+			return ( post.upvotes > 10 && post.link != '' && post.id != vm.post.id );
 		}
 	}
 
