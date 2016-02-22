@@ -7,7 +7,6 @@ nav {
   display: block;
   background: white;
   border-bottom: $borderDefault rgba($colorMain, .15);
-
   @include clearfix;
 }
 
