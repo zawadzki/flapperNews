@@ -1,0 +1,31 @@
+/*==============================================================================
+    Helpers: Variables
+==============================================================================*/
+
+/** Fonts **/
+$baseFont: 'Open Sans', Helvetica, Arial, sans-serif;
+
+/** Main colors **/
+$colorMain:  #2c3e50;
+$colorBg:    #eef2f3;
+$colorLinks: #1e8bc3;
+
+/** Shades of gray **/
+$lightGray:  #dcdcdc;
+
+/** UI Colors **/
+$yellow: #f9bf3b;
+$green:  #2ecc71;
+$red:    #ef4836;
+$heart:  #d91e18;
+
+/** Layers **/
+$master-layer:   15;
+$top-layer:      10;
+$middle-layer:    5;
+$default-layer:   0;
+$under-layer:   -10;
+
+/** Others **/
+$borderDefault: 1px solid;
+$cubic-bezier: cubic-bezier(0.645, 0.045, 0.355, 1.000);

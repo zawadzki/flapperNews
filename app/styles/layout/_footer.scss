@@ -1,0 +1,19 @@
+/*==============================================================================
+    Layout: Footer
+==============================================================================*/
+
+footer {
+  width: 100%;
+  padding: 2rem 0;
+  display: inline-block;
+
+  small {
+    float: left;
+    color: rgba($colorMain,.5);
+  }
+
+  a {
+    float: right;
+    font-size: 80%;
+  }
+}

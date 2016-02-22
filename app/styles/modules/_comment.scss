@@ -1,0 +1,101 @@
+/*==============================================================================
+    Module: Comment
+==============================================================================*/
+
+/** Whole comment **/
+.comment--single {
+  padding: 2rem 1rem;
+  display: block;
+  margin-top: .5rem;
+  border: $borderDefault rgba($colorMain, .15);
+  background: white;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .post--single-upvote {
+    top: 50%;
+    bottom: auto;
+    height: 66px;
+    transform: translateY(-50%);
+  }
+
+  .footer {
+    margin-top: .5rem;
+    color: rgba($colorMain,.5);
+  }
+}
+
+
+/** Liked comment **/
+.comment--single.liked {
+  background: tint($heart, 97%);
+  border-color: rgba($heart, 0.13);
+
+  &.comment--single-like i {
+    color: rgba($heart, 1);
+
+    &:before {
+      content: "\e904";
+    }
+  }
+}
+
+
+/** Like module **/
+.comment--single-like {
+  right: 1rem;
+  bottom: .75rem;
+  text-align: center;
+  position: absolute;
+
+  & i,
+  & span {
+    color: rgba($colorMain,.5);
+  }
+
+  & span {
+    font-size: 80%;
+    vertical-align: middle;
+  }
+
+  & i {
+    cursor: pointer;
+    font-size: 100%;
+    vertical-align: sub;
+
+    &:hover {
+      color: rgba($heart, .6);
+    }
+  }
+}
+
+
+/** Comments text **/
+.comment--single-content {
+  width: 100%;
+  padding: 0 3.65rem;
+  display: inline-block;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+
+/** Comment form **/
+.comment--form {
+  padding: 2rem;
+  margin-top: 2rem;
+  background: white;
+  border: $borderDefault rgba($colorMain, .15);
+
+  input {
+    width: 100%;
+    min-width: 0;
+    max-width: 250px;
+    margin-right: .25rem;
+  }
+}

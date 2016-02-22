@@ -1,0 +1,136 @@
+/*==============================================================================
+    Module: Post
+==============================================================================*/
+
+.post--single {
+  padding: 2rem 1rem;
+  position: relative;
+  border: $borderDefault rgba($colorMain, .15);
+  background: white;
+  margin: 1rem 0;
+
+  &:first-child {
+    margin-top: 1rem;
+  }
+
+  .footer {
+    width: 100%;
+    display: block;
+    margin: 1rem auto auto;
+    padding: 0 1rem 0 3.65rem;
+    border-top: $borderDefault rgba($colorMain, .05);
+
+    a,
+    span {
+      font-size: 75%;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.icon-star {
+  top: .75rem;
+  right: 1rem;
+  text-align: center;
+  position: absolute;
+  color: rgba($yellow, 1);
+}
+
+.footer {
+  a,
+  span {
+    font-size: 75%;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  span {
+    color: rgba($colorMain, .5);
+  }
+
+  a {
+    i {
+      margin-right: .15rem;
+    }
+    small {
+      letter-spacing: 1px;
+    }
+  }
+
+  .source {
+    float: right;
+    display: inline-block;
+    color: rgba($lightGray, .8);
+    &:hover {
+      color: rgba($lightGray, 1);
+    }
+  }
+}
+
+.post--single-upvote {
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 3.15rem;
+  bottom: auto;
+  margin: auto;
+  height: 67px;
+  width: 45px;
+
+  i,
+  span {
+    display: block;
+  }
+}
+
+.post--single-upvote {
+  i {
+    cursor: pointer;
+    font-size: 110%;
+    color: rgba($colorMain,.5);
+
+    &.up:hover {
+      color: rgba($green, .4);
+    }
+
+    &.down:hover {
+      color: rgba($red, .4);
+    }
+  }
+
+  &.upvoted i.up {
+    color: rgba($green, 1);
+  }
+
+  &.downvoted i.down {
+    color: rgba($red, 1);
+  }
+}
+
+.post--single-content {
+  display: block;
+  margin: 0 1rem 0 3.65rem;
+}
+
+.post--single-content h3,
+.post--single-content h4,
+.post--single-content p {
+  margin-top: 0;
+}
+
+.post--single-content h3 a,
+.post--single-content h4 a {
+  font-size: inherit;
+  color: inherit;
+}
+
+.post--single-content p,
+.post--single-content small {
+  color: rgba($colorMain,.5);
+}
+
+.post--single-content p {
+  margin-top: 1rem;
+}

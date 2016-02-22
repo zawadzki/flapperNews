@@ -1,0 +1,23 @@
+/*==============================================================================
+    Layout: Global
+==============================================================================*/
+
+* { box-sizing: border-box; }
+
+body {
+  color: $colorMain;
+  background: $colorBg;
+}
+
+a {
+  color: rgba($colorLinks, 0.8);
+  text-decoration: none;
+
+  &:hover {
+    color: rgba($colorLinks, 1);
+  }
+}
+
+.page {
+  @include clearfix;
+}

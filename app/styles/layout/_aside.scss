@@ -1,0 +1,47 @@
+/*==============================================================================
+    Layout: Aside
+==============================================================================*/
+
+aside {
+  float: right;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: inline-block;
+  width: calc(30% - 1rem);
+  border: $borderDefault rgba($colorMain, .15);
+  background: white;
+  padding: 2rem;
+
+  &.sticked {
+    top: 0;
+    position: fixed;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .icon-star {
+    right: 0;
+  }
+
+  .post--single-content {
+    margin: 0;
+  }
+
+}
+
+aside .post--single {
+  margin: 0;
+  border: 0;
+  padding: 1.5rem 0;
+  border-top: $borderDefault rgba($colorMain, .05);
+
+  &:first-of-type {
+    margin-top: 2rem;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}

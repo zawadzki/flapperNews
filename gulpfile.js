@@ -2,8 +2,6 @@ var gulp = require('gulp');
 var gulpLoadPlugins = require('gulp-load-plugins');
 var browserSync = require('browser-sync');
 
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var rucksack = require('rucksack-css');
 var cssnano = require('cssnano');
@@ -51,16 +49,15 @@ gulp.task('serve', ['styles', 'fonts'], function() {
             routes: {
                 '/bower_components': 'bower_components'
             }
-            }
-        });
+        }
+    });
 
     gulp.watch([
         'app/*.html',
         'app/js/**/*.js',
-        'app/styles/**/*.scss',
         '.tmp/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('app/styles/*.scss', ['styles']);
+    gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/fonts/**/*', ['fonts']);
 });

@@ -1,0 +1,47 @@
+/*==============================================================================
+    Page: Single Post
+==============================================================================*/
+
+.post--header {
+  position: relative;
+  display: block;
+  padding: 3rem 0;
+  text-align: left;
+
+  h2 {
+    margin: 0;
+    text-indent: -3px;
+    display: inline-block;
+    a {
+      color: inherit;
+    }
+  }
+
+  & p,
+  & small {
+    color: rgba($colorMain,.5);
+  }
+
+  p {
+    display: inline-block;
+    width: 85%;
+  }
+
+  .icon-star {
+    top: 2.75rem;
+  }
+}
+
+.post--header .post--single-upvote {
+  float: left;
+  width: 75px;
+  height: 130px;
+  margin-left: 0;
+  font-size: 150%;
+  position: static;
+  padding: 1rem 0 1rem 0;
+
+  span {
+    line-height: 1.65;
+  }
+}

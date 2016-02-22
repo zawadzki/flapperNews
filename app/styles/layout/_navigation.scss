@@ -1,0 +1,48 @@
+/*==============================================================================
+    Layout: Navigation
+==============================================================================*/
+
+/** Nav base **/
+nav {
+  display: block;
+  border-bottom: $borderDefault rgba($colorMain, .15);
+  background: white;
+  padding: 1rem;
+
+  @include clearfix;
+}
+
+
+/** Nav logo **/
+nav {
+  h1 {
+    float: left;
+    font-size: 100%;
+    display: inline-block;
+    margin-top: 0;
+
+    a {
+      color: currentColor;
+
+      i {
+        font-size: 1.25rem;
+        vertical-align: text-top;
+      }
+    }
+  }
+}
+
+
+/** Nav links **/
+nav ul {
+  float: right;
+  display: inline-block;
+
+  li {
+    display: inline;
+
+    a {
+      padding: 0 .5rem;
+    }
+  }
+}

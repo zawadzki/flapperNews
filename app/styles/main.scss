@@ -1,479 +1,55 @@
-@import "base/variables";
+/*==============================================================================
+    Main Style
+==============================================================================*/
+
+/*-------------------------------------------*\
+|
+|    Project Info
+|
+|    Name:     Flapper News
+|    Version:  1.0.0
+|    Updated:  22.02.2016
+|
+|    Website:  null
+|
+|    Author:   Damian Zawadzki
+|
+|    Front-end Developer
+|    @zawadzki
+|
+\*-------------------------------------------*/
+
+/*==============================================================================
+    Imports
+==============================================================================*/
+
+/** Bourbon libs **/
+@import "bourbon/bourbon";
+
+/** Helpers **/
+@import "helpers/variables";
+
+/** Base **/
+@import "base/reset";
 @import "base/typebase";
 @import "base/icons";
 
-
-/* --- Base --- */
-
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    color: $colorMain;
-    background: $colorBg;
-}
-
-a {
-    color: rgba($colorLinks, 0.8);
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgba($colorLinks, 1);
-}
-
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.page {
-    clear: both;
-}
-
-.page:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* --- Navbar --- */
-
-
-nav {
-    display: block;
-    border-bottom: $borderDefault;
-    background: white;
-    padding: 1rem;
-}
-
-nav:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav h1 {
-    float: left;
-    font-size: 100%;
-    display: inline-block;
-    margin-top: 0;
-}
-
-nav h1 a {
-    color: var(--colorMain);
-}
-
-nav h1 a i {
-    font-size: 1.25rem;
-    vertical-align: text-top;
-}
-
-nav ul {
-    float: right;
-    display: inline-block;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    padding: 0 .5rem;
-}
-
-
-/* --- Forms --- */
-
-
-aside {
-    float: right;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    display: inline-block;
-    width: calc(30% - 1rem);
-    border: $borderDefault;
-    background: white;
-    padding: 2rem;
-}
-
-aside.sticked {
-    top: 0;
-    position: fixed;
-}
-
-input,
-textarea {
-    outline: 0;
-    margin: .5rem 0;
-    background: rgba(0,0,0,.015);
-    padding: .5rem .5rem .5rem .65rem;
-    border: $borderDefault;
-    min-width: 100%;
-}
-
-input[type=text]:focus,
-textarea:focus {
-    border: 1px solid #dfdfdf;
-}
-
-textarea {
-    resize: none;
-    min-height: 150px;
-}
-
-form h3 {
-    margin-top: 0;
-}
-
-.form-group {
-    display: block;
-    margin-top: 2rem;
-}
-
-.form-group > input,
-.form-group > textarea {
-    margin-top: 0;
-}
-
-input[type=submit] {
-    width: 100%;
-    padding: .5rem;
-    border: 1px solid #dcdcdc;
-    background: #eaeaea;
-    margin-bottom: 0;
-    color: #8c8c8c;
-}
-
-input[type=submit]:active {
-    background: #dcdcdc;
-    transform: translateY(1px);
-}
-
-
-/* --- Post Single --- */
-
-
-main {
-    width: 70%;
-    display: inline-block;
-}
-
-.post--single {
-    padding: 2rem 1rem;
-    position: relative;
-    border: $borderDefault;
-    background: white;
-    margin: 1rem 0;
-}
-
-.post--single:first-child {
-    margin-top: 1rem;
-}
-
-.post--single .footer {
-    width: 100%;
-    display: block;
-    padding: 0 1rem 0 3.65rem;
-    margin: 1rem auto auto;
-    border-top: $borderDefault;
-}
-
-.footer a,
-.footer span {
-    font-size: 75%;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-.footer span {
-    color: rgba(44, 62, 80,.5);
-}
-
-.footer a i {
-    margin-right: .15rem;
-}
-
-.footer a small {
-    letter-spacing: 1px;
-}
-
-.footer .source {
-    float: right;
-    display: inline-block;
-    color: #e3e3e3;
-}
-
-.footer .source:hover {
-    color: #d2d2d2;
-}
-
-.icon-star {
-    top: .75rem;
-    right: 1rem;
-    text-align: center;
-    position: absolute;
-    color: rgba(249, 191, 59,1);
-}
-
-.post--single-upvote {
-    padding: 0;
-    text-align: center;
-    display: inline-block;
-    position: absolute;
-    top: 3.15rem;
-    bottom: auto;
-    margin: auto;
-    height: 67px;
-    width: 45px;
-}
-
-.post--single-upvote i,
-.post--single-upvote span {
-    display: block;
-}
-
-.post--single-upvote i {
-    cursor: pointer;
-    font-size: 110%;
-    color: rgba(44, 62, 80,.5);
-}
-
-.post--single-upvote i.up:hover {
-    color: rgba(46, 204, 113,.4);
-}
-
-.post--single-upvote.upvoted i.up {
-    color: rgba(46, 204, 113,1);
-}
-
-.post--single-upvote i.down:hover {
-    color: rgba(239, 72, 54,.4);
-}
-
-.post--single-upvote.downvoted i.down {
-    color: rgba(239, 72, 54,1);
-}
-
-.post--single-upvote span {
-    padding: .25rem;
-    color: rgba(44, 62, 80,.5);
-}
-
-.post--single-content {
-    display: block;
-    margin: 0 1rem 0 3.65rem;
-}
-
-.post--single-content h3,
-.post--single-content h4,
-.post--single-content p {
-    margin-top: 0;
-}
-
-.post--single-content h3 a,
-.post--single-content h4 a {
-    font-size: inherit;
-    color: inherit;
-}
-
-.post--single-content p,
-.post--single-content small {
-    color: rgba(44, 62, 80,.5);
-}
-
-.post--single-content p {
-    margin-top: 1rem;
-}
-
-
-/* --- Footer --- */
-
-
-footer {
-    width: 100%;
-    padding: 2rem 0;
-    display: inline-block;
-}
-
-footer small {
-    float: left;
-    color: rgba(44, 62, 80,.5);
-}
-
-footer a {
-    float: right;
-    font-size: 80%;
-}
-
-
-/* --- Comments --- */
-
-
-.post--header {
-    position: relative;
-    display: block;
-    padding: 3rem 0;
-    text-align: left;
-}
-
-.post--header h2 {
-    margin: 0;
-    text-indent: -3px;
-    display: inline-block;
-}
-
-.post--header h2 a {
-    color: inherit;
-}
-
-.post--header small,
-.post--header p {
-    color: rgba(44, 62, 80,.5);
-}
-
-.post--header p {
-    display: inline-block;
-    width: 85%;
-}
-
-.post--header .icon-star {
-    top: 2.75rem;
-}
-
-.post--header .post--single-upvote {
-    position: static;
-    float: left;
-    font-size: 150%;
-    height: 130px;
-    width: 75px;
-    margin-left: 0;
-    padding: 1rem 0 1rem 0;
-}
-
-.post--header .post--single-upvote span {
-    line-height: 1.65;
-}
-
-.comment--single {
-    padding: 2rem 1rem;
-    display: block;
-    margin-top: .5rem;
-    border: $borderDefault;
-    background: white;
-    position: relative;
-}
-
-.comment--single:first-child {
-    margin-top: 0;
-}
-
-.comment--single .post--single-upvote {
-    height: 66px;
-    top: 50%;
-    bottom: auto;
-    transform: translateY(-50%);
-}
-
-.comment--single-like {
-    right: 1rem;
-    bottom: .75rem;
-    text-align: center;
-    position: absolute;
-}
-
-.comment--single-like i,
-.comment--single-like span {
-    color: rgba(44, 62, 80,.5);
-}
-
-.comment--single-like span {
-    font-size: 80%;
-    vertical-align: middle;
-}
-
-.comment--single-like i {
-    cursor: pointer;
-    font-size: 100%;
-    vertical-align: sub;
-}
-
-.comment--single-like i:hover {
-    color: rgba(217, 30, 24,.6);
-}
-
-.comment--single.liked {
-    background: rgba(217, 30, 24,0.025);
-    border-color: rgba(217, 30, 24,0.1);
-}
-
-.comment--single.liked .comment--single-like i {
-    color: rgba(217, 30, 24,1);
-}
-
-.comment--single.liked .comment--single-like i:before {
-    content: "\e904";
-}
-
-.comment--single-content {
-    width: 100%;
-    padding: 0 3.65rem;
-    display: inline-block;
-}
-
-.comment--single-content p {
-    margin-top: 0;
-}
-
-.comment--single .footer {
-    margin-top: .5rem;
-    color: rgba(44, 62, 80,.5);
-}
-
-.comment--form {
-    margin-top: 2rem;
-    border: $borderDefault;
-    background: white;
-    padding: 2rem;
-}
-
-.comment--form input {
-    max-width: 250px;
-    min-width: 0;
-    width: 100%;
-    margin-right: .25rem;
-}
-
-
-/* --- Popular Aside --- */
-
-aside h3 {
-    margin-top: 0;
-}
-
-aside .post--single {
-    margin: 0;
-    border: 0;
-    padding: 1.5rem 0;
-    border-top: $borderDefault;
-}
-
-aside .post--single:first-of-type {
-    margin-top: 2rem;
-}
-
-aside .post--single:last-child {
-    padding-bottom: 0;
-}
-
-aside .post--single-content {
-    margin: 0;
-}
-
-aside .icon-star {
-    right: 0;
-}
+/** Layout **/
+@import "layout/global";
+@import "layout/grid";
+@import "layout/navigation";
+@import "layout/main";
+@import "layout/aside";
+@import "layout/footer";
+
+/** Modules **/
+@import "modules/post";
+@import "modules/form";
+@import "modules/comment";
+
+/** Pages **/
+@import "pages/single-post";
+
+/*==============================================================================
+    Fin.
+==============================================================================*/

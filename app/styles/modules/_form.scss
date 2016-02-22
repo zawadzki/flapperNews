@@ -1,0 +1,50 @@
+/*==============================================================================
+    Module: Form
+==============================================================================*/
+
+.form-group {
+  display: block;
+  margin-top: 2rem;
+}
+
+.form-group > input,
+.form-group > textarea {
+  margin-top: 0;
+}
+
+form h3 {
+  margin-top: 0;
+}
+
+input,
+textarea {
+  outline: 0;
+  margin: .5rem 0;
+  background: rgba(0,0,0,.015);
+  padding: .5rem .5rem .5rem .65rem;
+  border: $borderDefault rgba($colorMain, .1);
+  min-width: 100%;
+
+  &:focus {
+    border-color: rgba($colorMain, .15);
+  }
+}
+
+textarea {
+  resize: none;
+  min-height: 150px;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: .5rem;
+  border: $borderDefault rgba($colorMain, .1);
+  background: rgba($colorMain, .1);
+  margin-bottom: 0;
+  color: rgba($colorMain, .8);
+}
+
+input[type=submit]:active {
+  background: rgba($colorMain, .15);
+  transform: translateY(1px);
+}
