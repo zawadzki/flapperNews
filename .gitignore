@@ -1,8 +1,9 @@
-logs/*
-.tmp/
 !.gitkeep
+.tmp/
 node_modules/
 bower_components/
-tmp
-.DS_Store
 .idea/
+dist/
+tmp
+logs/*
+.DS_Store

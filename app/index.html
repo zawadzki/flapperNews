@@ -11,7 +11,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
+    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 </head>
 <body>
 
@@ -42,23 +44,20 @@
     </div>
 </footer>
 
-<!--Dependencies-->
+<!-- build:js js/vendor.js -->
+<!-- bower:js -->
 <script src="/bower_components/angular/angular.js"></script>
 <script src="/bower_components/angular-route/angular-route.js"></script>
-
 <script src="/bower_components/moment/moment.js"></script>
 <script src="/bower_components/angular-moment/angular-moment.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-<!--Main module-->
 <script src="js/app.module.js"></script>
-
-<!--Homepage module-->
 <script src="js/homepage/homepage.module.js"></script>
 <script src="js/homepage/config.route.js"></script>
 <script src="js/homepage/homepage.controller.js"></script>
 <script src="js/homepage/homepage.directive.js"></script>
-
-<!--Posts module-->
 <script src="js/posts/posts.module.js"></script>
 <script src="js/posts/config.route.js"></script>
 <script src="js/posts/posts.controller.js"></script>
