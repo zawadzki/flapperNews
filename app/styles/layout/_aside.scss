@@ -4,13 +4,12 @@
 
 aside {
   float: right;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  display: inline-block;
-  width: calc(30% - 1rem);
-  border: $borderDefault rgba($colorMain, .15);
-  background: white;
   padding: 2rem;
+  margin-top: 1rem;
+  background: white;
+  display: inline-block;
+  border: $borderDefault rgba($colorMain, .15);
+  lost-column: 1/3;
 
   &.sticked {
     top: 0;

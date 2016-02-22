@@ -5,11 +5,11 @@
 .form-group {
   display: block;
   margin-top: 2rem;
-}
 
-.form-group > input,
-.form-group > textarea {
-  margin-top: 0;
+  > input,
+  > textarea {
+    margin-top: 0;
+  }
 }
 
 form h3 {
@@ -42,9 +42,9 @@ input[type=submit] {
   background: rgba($colorMain, .1);
   margin-bottom: 0;
   color: rgba($colorMain, .8);
-}
 
-input[type=submit]:active {
-  background: rgba($colorMain, .15);
-  transform: translateY(1px);
+  &:active {
+    background: rgba($colorMain, .15);
+    transform: translateY(1px);
+  }
 }

@@ -17,8 +17,8 @@
     }
   }
 
-  & p,
-  & small {
+  p,
+  small {
     color: rgba($colorMain,.5);
   }
 
@@ -32,7 +32,7 @@
   }
 }
 
-.post--header .post--single-upvote {
+.post--header .vote {
   float: left;
   width: 75px;
   height: 130px;

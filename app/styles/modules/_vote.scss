@@ -1,0 +1,49 @@
+/*==============================================================================
+    Module: Vote
+==============================================================================*/
+
+.vote {
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 3.15rem;
+  bottom: auto;
+  margin: auto;
+  height: 67px;
+  width: 45px;
+
+  i,
+  span {
+    display: block;
+  }
+
+  span {
+    padding: .25rem;
+    color: rgba($colorMain,.5);
+  }
+}
+
+.vote {
+  i {
+    cursor: pointer;
+    font-size: 110%;
+    color: rgba($colorMain,.5);
+
+    &.up:hover {
+      color: rgba($green, .4);
+    }
+
+    &.down:hover {
+      color: rgba($red, .4);
+    }
+  }
+
+  &.upvoted i.up {
+    color: rgba($green, 1);
+  }
+
+  &.downvoted i.down {
+    color: rgba($red, 1);
+  }
+}

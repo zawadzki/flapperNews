@@ -3,11 +3,11 @@
 ==============================================================================*/
 
 .post--single {
-  padding: 2rem 1rem;
-  position: relative;
-  border: $borderDefault rgba($colorMain, .15);
-  background: white;
   margin: 1rem 0;
+  background: white;
+  position: relative;
+  padding: 2rem 1rem;
+  border: $borderDefault rgba($colorMain, .15);
 
   &:first-child {
     margin-top: 1rem;
@@ -19,13 +19,6 @@
     margin: 1rem auto auto;
     padding: 0 1rem 0 3.65rem;
     border-top: $borderDefault rgba($colorMain, .05);
-
-    a,
-    span {
-      font-size: 75%;
-      display: inline-block;
-      margin-top: 1rem;
-    }
   }
 }
 
@@ -45,10 +38,6 @@
     margin-top: 1rem;
   }
 
-  span {
-    color: rgba($colorMain, .5);
-  }
-
   a {
     i {
       margin-right: .15rem;
@@ -56,6 +45,10 @@
     small {
       letter-spacing: 1px;
     }
+  }
+
+  span {
+    color: rgba($colorMain, .5);
   }
 
   .source {
@@ -68,69 +61,27 @@
   }
 }
 
-.post--single-upvote {
-  padding: 0;
-  text-align: center;
-  display: inline-block;
-  position: absolute;
-  top: 3.15rem;
-  bottom: auto;
-  margin: auto;
-  height: 67px;
-  width: 45px;
-
-  i,
-  span {
-    display: block;
-  }
-}
-
-.post--single-upvote {
-  i {
-    cursor: pointer;
-    font-size: 110%;
-    color: rgba($colorMain,.5);
-
-    &.up:hover {
-      color: rgba($green, .4);
-    }
-
-    &.down:hover {
-      color: rgba($red, .4);
-    }
-  }
-
-  &.upvoted i.up {
-    color: rgba($green, 1);
-  }
-
-  &.downvoted i.down {
-    color: rgba($red, 1);
-  }
-}
-
 .post--single-content {
   display: block;
   margin: 0 1rem 0 3.65rem;
-}
 
-.post--single-content h3,
-.post--single-content h4,
-.post--single-content p {
-  margin-top: 0;
-}
+  h3,
+  h4,
+  p {
+    margin-top: 0;
 
-.post--single-content h3 a,
-.post--single-content h4 a {
-  font-size: inherit;
-  color: inherit;
-}
+    a {
+      font-size: inherit;
+      color: inherit;
+    }
+  }
 
-.post--single-content p,
-.post--single-content small {
-  color: rgba($colorMain,.5);
-}
+  p,
+  small {
+    color: rgba($colorMain,.5);
+  }
 
-.post--single-content p {
-  margin-top: 1rem;
+  p {
+    margin-top: 1rem;
+  }
 }

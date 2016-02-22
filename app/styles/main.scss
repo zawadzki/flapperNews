@@ -44,10 +44,13 @@
 
 /** Modules **/
 @import "modules/post";
+@import "modules/vote";
 @import "modules/form";
 @import "modules/comment";
+@import "modules/like";
 
 /** Pages **/
+@import "pages/homepage";
 @import "pages/single-post";
 
 /*==============================================================================

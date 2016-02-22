@@ -2,18 +2,15 @@
     Layout: Navigation
 ==============================================================================*/
 
-/** Nav base **/
 nav {
-  display: block;
-  border-bottom: $borderDefault rgba($colorMain, .15);
-  background: white;
   padding: 1rem;
+  display: block;
+  background: white;
+  border-bottom: $borderDefault rgba($colorMain, .15);
 
   @include clearfix;
 }
 
-
-/** Nav logo **/
 nav {
   h1 {
     float: left;
@@ -32,8 +29,6 @@ nav {
   }
 }
 
-
-/** Nav links **/
 nav ul {
   float: right;
   display: inline-block;
