@@ -1,3 +1,8 @@
+@import "base/variables";
+@import "base/typebase";
+@import "base/icons";
+
+
 /* --- Base --- */
 
 
@@ -6,17 +11,17 @@
 }
 
 body {
-    color: rgba(44, 62, 80,1);
-    background: rgba(0,0,0,.01);
+    color: $colorMain;
+    background: $colorBg;
 }
 
 a {
-    color: rgba(30, 139, 195,.8);
+    color: rgba($colorLinks, 0.8);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgba(30, 139, 195,1);
+    color: rgba($colorLinks, 1);
 }
 
 .container {
@@ -41,7 +46,7 @@ a:hover {
 
 nav {
     display: block;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: $borderDefault;
     background: white;
     padding: 1rem;
 }
@@ -60,7 +65,7 @@ nav h1 {
 }
 
 nav h1 a {
-    color: currentColor;
+    color: var(--colorMain);
 }
 
 nav h1 a i {
@@ -91,7 +96,7 @@ aside {
     margin-left: 1rem;
     display: inline-block;
     width: calc(30% - 1rem);
-    border: 1px solid #eaeaea;
+    border: $borderDefault;
     background: white;
     padding: 2rem;
 }
@@ -107,7 +112,7 @@ textarea {
     margin: .5rem 0;
     background: rgba(0,0,0,.015);
     padding: .5rem .5rem .5rem .65rem;
-    border: 1px solid #eaeaea;
+    border: $borderDefault;
     min-width: 100%;
 }
 
@@ -161,7 +166,7 @@ main {
 .post--single {
     padding: 2rem 1rem;
     position: relative;
-    border: 1px solid #eaeaea;
+    border: $borderDefault;
     background: white;
     margin: 1rem 0;
 }
@@ -175,7 +180,7 @@ main {
     display: block;
     padding: 0 1rem 0 3.65rem;
     margin: 1rem auto auto;
-    border-top: 1px solid rgba(0,0,0,.035);
+    border-top: $borderDefault;
 }
 
 .footer a,
@@ -358,7 +363,7 @@ footer a {
     padding: 2rem 1rem;
     display: block;
     margin-top: .5rem;
-    border: 1px solid #eaeaea;
+    border: $borderDefault;
     background: white;
     position: relative;
 }
@@ -431,7 +436,7 @@ footer a {
 
 .comment--form {
     margin-top: 2rem;
-    border: 1px solid #eaeaea;
+    border: $borderDefault;
     background: white;
     padding: 2rem;
 }
@@ -454,7 +459,7 @@ aside .post--single {
     margin: 0;
     border: 0;
     padding: 1.5rem 0;
-    border-top: 1px solid #eaeaea;
+    border-top: $borderDefault;
 }
 
 aside .post--single:first-of-type {

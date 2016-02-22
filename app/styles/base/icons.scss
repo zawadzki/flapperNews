@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'flapper-icons';
     src:
-            url('../fonts/flapper-icons.ttf?re1p17') format('truetype'),
-            url('../fonts/flapper-icons.woff?re1p17') format('woff'),
-            url('../fonts/flapper-icons.svg?re1p17#flapper-icons') format('svg');
+            url('../../fonts/flapper-icons.ttf?re1p17') format('truetype'),
+            url('../../fonts/flapper-icons.woff?re1p17') format('woff'),
+            url('../../fonts/flapper-icons.svg?re1p17#flapper-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,6 @@
 [class^="icon-"],
 [class*=" icon-"] {
     font-family: 'flapper-icons', sans-serif !important;
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
