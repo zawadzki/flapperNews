@@ -4,4 +4,8 @@
 
 main {
   lost-column: 2/3;
+
+  @include rwd(tablet) {
+    lost-column: 1/1;
+  }
 }

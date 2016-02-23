@@ -11,7 +11,7 @@ $smaller-screen: 1180px;
 $small-screen:   1280px;
 $medium-screen:  1366px;
 
-@mixin mq($canvas) {
+@mixin rwd($canvas) {
 
   // Really Small devices
   @if $canvas == phone {

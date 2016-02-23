@@ -112,18 +112,30 @@
 	function aside() {
 		return {
 			sticky : function(el, className) {
-                var elWidth = el[0].offsetWidth;
-                var trigger = el[0].offsetTop;
+				var trigger = el[0].offsetTop;
 
-				window.addEventListener('scroll', function() {
-					if( window.scrollY > trigger ) {
-						el[0].classList.add(className);
-                        el[0].style.width = elWidth + 'px';
-					} else {
+				window.addEventListener('scroll', scrollAside);
+
+				window.addEventListener('resize', function() {
+					if( window.innerWidth < 1024 ) {
 						el[0].classList.remove(className);
-                        el[0].style.width = '';
+						el[0].style.width = '';
+						window.removeEventListener('scroll', scrollAside);
+					} else {
+						window.addEventListener('scroll', scrollAside);
 					}
 				});
+
+				function scrollAside() {
+					var elWidth = el[0].offsetWidth;
+					if( window.scrollY > trigger ) {
+						el[0].classList.add(className);
+						el[0].style.width = elWidth + 'px';
+					} else {
+						el[0].classList.remove(className);
+						el[0].style.width = '';
+					}
+				}
 			}
 		};
 	}
