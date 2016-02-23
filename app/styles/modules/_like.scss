@@ -8,6 +8,8 @@
 
   .comment--single-like i {
     color: rgba($heart, 1);
+    animation: beating 350ms 1 alternate;
+    display: inline-block;
 
     &:before {
       content: "\e904";
@@ -32,6 +34,7 @@
     cursor: pointer;
     font-size: 100%;
     vertical-align: sub;
+    @include backface-visibility(hidden);
 
     &:hover {
       color: rgba($heart, .6);
@@ -44,4 +47,11 @@
     display: inline-block;
     width: 1rem;
   }
+}
+
+@keyframes beating {
+  0%   { transform: scale(1)    }
+  40%  { transform: scale(1.1) }
+  70%  { transform: scale(.9)   }
+  100% { transform: scale(1)    }
 }
