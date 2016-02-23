@@ -21,8 +21,9 @@ nav {
       color: currentColor;
 
       i {
-        font-size: 1.25rem;
-        vertical-align: text-bottom;
+        font-size: 1.5rem;
+        vertical-align: sub;
+        color: $colorLinks;
       }
     }
   }
