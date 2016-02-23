@@ -3,12 +3,14 @@
 ==============================================================================*/
 
 .comment--single {
-  padding: 2rem 1rem;
   display: block;
   margin-top: .5rem;
-  border: $borderDefault rgba($colorMain, .15);
   background: white;
   position: relative;
+  padding: 2rem 1rem;
+  border: $borderDefault rgba($colorMain, .15);
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
 
   &:first-child {
     margin-top: 0;
@@ -39,9 +41,11 @@
 
 .comment--form {
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background: white;
   border: $borderDefault rgba($colorMain, .15);
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
 
   input {
     width: 100%;

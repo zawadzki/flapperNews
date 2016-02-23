@@ -43,6 +43,10 @@ input[type=submit] {
   margin-bottom: 0;
   color: rgba($colorMain, .8);
 
+  &:hover {
+    background: rgba($colorMain, .12);
+  }
+
   &:active {
     background: rgba($colorMain, .15);
     transform: translateY(1px);

@@ -13,52 +13,52 @@ $medium-screen:  1366px;
 
 @mixin mq($canvas) {
 
-// Really Small devices
-@if $canvas == phone {
-  @media only screen and (max-width: $phone) { @content; }
-}
+  // Really Small devices
+  @if $canvas == phone {
+    @media only screen and (max-width: $phone) { @content; }
+  }
 
-// Smartphones
-@else if $canvas == smartphone {
-  @media only screen and (max-width: $smartphone) { @content; }
-}
-@else if $canvas == smartphone-portrait {
-  @media only screen and (max-width: $smartphone) and (orientation: portrait) { @content; }
-}
-@else if $canvas == smartphone-landscape {
-  @media only screen and (max-width: $smartphone) and (orientation: landscape) { @content; }
-}
+  // Smartphones
+  @else if $canvas == smartphone {
+    @media only screen and (max-width: $smartphone) { @content; }
+  }
+  @else if $canvas == smartphone-portrait {
+    @media only screen and (max-width: $smartphone) and (orientation: portrait) { @content; }
+  }
+  @else if $canvas == smartphone-landscape {
+    @media only screen and (max-width: $smartphone) and (orientation: landscape) { @content; }
+  }
 
-// Tablets
-@else if $canvas == tablet {
-  @media only screen and (max-width: $tablet) { @content; }
-}
-@else if $canvas == tablet-portrait {
-  @media only screen and (max-width: $tablet) and (orientation: portrait) { @content; }
-}
-@else if $canvas == tablet-landscape {
-  @media only screen and (max-width: $tablet) and (orientation: landscape) { @content; }
-}
+  // Tablets
+  @else if $canvas == tablet {
+    @media only screen and (max-width: $tablet) { @content; }
+  }
+  @else if $canvas == tablet-portrait {
+    @media only screen and (max-width: $tablet) and (orientation: portrait) { @content; }
+  }
+  @else if $canvas == tablet-landscape {
+    @media only screen and (max-width: $tablet) and (orientation: landscape) { @content; }
+  }
 
-// Screens
-@else if  $canvas == smaller-screen {
-  @media only screen and (max-width: $smaller-screen) { @content; }
-}
-@else if $canvas == small-screen {
-  @media only screen and (max-width: $small-screen) { @content; }
-}
-@else if $canvas == medium-screen {
-  @media only screen and (max-width: $medium-screen) { @content; }
-}
+  // Screens
+  @else if  $canvas == smaller-screen {
+    @media only screen and (max-width: $smaller-screen) { @content; }
+  }
+  @else if $canvas == small-screen {
+    @media only screen and (max-width: $small-screen) { @content; }
+  }
+  @else if $canvas == medium-screen {
+    @media only screen and (max-width: $medium-screen) { @content; }
+  }
 
-// More than tablets
-@else if $canvas == min-tablet {
-  @media only screen and (min-width: $min-tablet) { @content; }
-}
+  // More than tablets
+  @else if $canvas == min-tablet {
+    @media only screen and (min-width: $min-tablet) { @content; }
+  }
 
-// Print styles
-@else if $canvas == print {
-  @media print { @content; }
-}
+  // Print styles
+  @else if $canvas == print {
+    @media print { @content; }
+  }
 
 }

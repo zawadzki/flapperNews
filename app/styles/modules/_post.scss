@@ -3,11 +3,13 @@
 ==============================================================================*/
 
 .post--single {
-  margin: 1rem 0;
+  margin: .5rem 0;
   background: white;
   position: relative;
   padding: 2rem 1rem;
   border: $borderDefault rgba($colorMain, .15);
+  box-shadow: $boxShadow;
+  border-radius: $borderRadius;
 
   &:first-child {
     margin-top: 1rem;
@@ -65,9 +67,9 @@
   display: block;
   margin: 0 1rem 0 3.65rem;
 
+  p,
   h3,
-  h4,
-  p {
+  h4 {
     margin-top: 0;
 
     a {

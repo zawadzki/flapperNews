@@ -9,6 +9,8 @@ aside {
   background: white;
   display: inline-block;
   border: $borderDefault rgba($colorMain, .15);
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
   lost-column: 1/3;
 
   &.sticked {
@@ -35,6 +37,7 @@ aside .post--single {
   border: 0;
   padding: 1.5rem 0;
   border-top: $borderDefault rgba($colorMain, .05);
+  box-shadow: none;
 
   &:first-of-type {
     margin-top: 2rem;
