@@ -22,6 +22,10 @@
             <small ng-hide="vm.post.author">by anonymous</small>
         </div>
         <p>{{ vm.post.desc }}</p>
+
+        <div class="footer">
+            <a href="{{ vm.post.link }}" target="_blank" class="source"><i class="icon icon-link"></i> {{ vm.post.link }}</a>
+        </div>
     </div>
 
     <div class="comments--section">

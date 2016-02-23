@@ -28,6 +28,10 @@ textarea {
   &:focus {
     border-color: rgba($colorMain, .15);
   }
+
+  &::placeholder {
+    color: rgba($colorMain, .5);
+  }
 }
 
 textarea {

@@ -37,7 +37,7 @@ gulp.task('styles', function() {
         }));
 });
 
-gulp.task('move', function(){
+gulp.task('move', function() {
     return gulp.src('./js/**/*.*', { cwd: 'app/' })
         .pipe($.if('*.js', $.uglify()))
         .pipe(gulp.dest('dist/js'));
