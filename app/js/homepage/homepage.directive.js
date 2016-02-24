@@ -16,6 +16,8 @@
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
                     upvotes: 15,
+					upvoted: false,
+					downvoted: false,
 					date: moment(new Date('2016-02-20T05:29:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -33,6 +35,8 @@
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
                     upvotes: 13,
+					upvoted: false,
+					downvoted: false,
 					date: moment(new Date('2016-02-20T04:29:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -47,6 +51,8 @@
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
                     upvotes: 12,
+					upvoted: false,
+					downvoted: false,
 					date: moment(new Date('2016-02-20T04:15:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -62,6 +68,8 @@
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
                     upvotes: 11,
+					upvoted: false,
+					downvoted: false,
 					date: moment(new Date('2016-02-20T03:29:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -78,6 +86,8 @@
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
                     upvotes: 6,
+					upvoted: false,
+					downvoted: false,
 					date: moment(new Date('2016-02-20T02:29:59Z')),
 					comments: [
 						{ author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -93,6 +103,8 @@
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias excepturi expedita facilis nesciunt rem rerum unde, velit veniam voluptas voluptates.',
 					author: 'zawadzki',
                     upvotes: 5,
+					upvoted: false,
+					downvoted: false,
 					date: moment(new Date('2016-02-20T02:15:59Z')),
                     comments: [
                         { author: 'HelloKitty', body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', date: moment(new Date('2016-02-20T02:15:59Z')), upvotes: 0, likes: 0, liked: false },
@@ -148,27 +160,39 @@
 	function vote() {
 		return {
 			up : function(post) {
-				if( post.classVote === 'upvoted' ) {
+				if( post.upvoted === true ) {
 					post.upvotes--;
 					post.classVote = '';
-				} else if( post.classVote === 'downvoted' ) {
+					post.upvoted = false;
+					post.downvoted = false;
+				} else if( post.downvoted === true ) {
 					post.upvotes += 2;
 					post.classVote = 'upvoted';
+					post.upvoted = true;
+					post.downvoted = false;
 				} else {
 					post.upvotes++;
 					post.classVote = 'upvoted';
+					post.upvoted = true;
+					post.downvoted = false;
 				}
 			},
 			down : function(post) {
-				if( post.classVote === 'downvoted' ) {
+				if( post.downvoted === true ) {
 					post.upvotes++;
 					post.classVote = '';
-				} else if( post.classVote === 'upvoted' ) {
+					post.downvoted = false;
+					post.upvoted = false;
+				} else if( post.upvoted === true ) {
 					post.upvotes -= 2;
 					post.classVote = 'downvoted';
+					post.downvoted = true;
+					post.upvoted = false;
 				} else {
 					post.upvotes--;
 					post.classVote = 'downvoted';
+					post.downvoted = true;
+					post.upvoted = false;
 				}
 			}
 		}
