@@ -7,7 +7,7 @@
 		.factory('posts', posts);
 
 	function posts() {
-		return {
+		var o = {
 			posts: [
 				{
 					id: 0,
@@ -114,6 +114,8 @@
                 }
 			]
 		};
+
+		return o;
 	}
 
     //Sticky aside directive
